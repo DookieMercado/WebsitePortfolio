@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJIM - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            DJ<span class="logo-accent">||</span>M<span class="logo-accent">▷</span>
+        </div>
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" title="Toggle navigation menu" aria-label="Toggle navigation menu">
+            <span class="sr-only">Menu</span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" data-number="00.">Home</a></li>
+            <li><a href="#about" data-number="01.">About</a></li>
+            <li><a href="#projects" data-number="02.">Projects</a></li>
+            <li><a href="#skills" data-number="03.">Skills</a></li>
+            <li><a href="#contact" data-number="04.">Contact</a></li>
+            <li>
+    <a href="files/ResumeM.pdf" download class="resume-btn" title="Download Resume">Resume</a>
+</li>
+
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-intro">Hi, my name is</div>
+        <h1 class="hero-name">DAVY MERCADO</h1>
+        <h2 class="hero-title">I Design Mobile and Web Interface.</h2>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+    <div class="image-placeholder">
+        <img src="./images/Me.png" alt="My Photo" class="about-photo">
+    </div>
+</div>
+
+            <div class="about-content">
+                <p class="about-text">
+                    I am a designer who is deeply focused on creating clean, intuitive, and user-centered visuals, with a strong emphasis on blending <span class="highlight">creativity and functionality</span> to produce meaningful digital experiences.
+                </p>
+                <p class="about-text">
+                    I take the time to understand the purpose behind each project, the needs of the users, and the goals of the client, allowing me to design solutions that are not only visually appealing but also practical, accessible, and easy to use.
+                </p>
+                <p class="about-text">
+                    Through <span class="highlight">careful attention</span> to detail, consistency, and usability, I aim to create designs that communicate clearly, enhance user engagement, and leave a lasting impression, while continuously improving my skills and adapting to new design trends and technologies.
+                </p>
+                <p class="about-text">
+                    Currently, I am also accepting project commissions for students, offering creative and reliable design support for academic, personal, and portfolio-related projects.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">PROJECTS LIST</h2>
+        
+        <div class="projects-container">
+            <!-- Major Projects -->
+            <div class="project-category">
+                <h3 class="category-title">MAJOR PROJECT</h3>
+                
+               <div class="project-item">
+    <div class="project-year">2023-2025</div>
+    <div class="project-details">
+        <h4 class="project-name">GEOPORT MALAYBALAY (CAPSTONE)</h4>
+        <p class="project-description">
+            Geoport Malaybalay is a community-driven mobile application that enables citizens to report highway and infrastructure issues, including vehicular accidents, in real time. By simply taking a picture, the app automatically geotags the reporter’s location using AI-powered image processing. It also provides dynamic rerouting suggestions, helping drivers avoid hazards, improving road safety, and enabling faster response from local authorities.
+        </p>
+
+        <div class="project-buttons">
+            <a href="https://dookiemercado.github.io/GeoportWeb/" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               title="Visit Geoport Malaybalay project website">
+                <button class="project-btn" type="button">Project Web</button>
+            </a>
+
+            <a href="https://www.figma.com/design/fDZLLu5QiKpYQBF3w4IPh8/Untitled?node-id=0-1&t=ajYcOacKf1ZbpntI-1"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="View Geoport Malaybalay design mockups">
+    <button class="project-btn" type="button">
+        View Designs
+    </button>
+</a>
+
+        </div>
+    </div>
+</div>
+
+
+                <div class="project-item">
+                    <div class="project-year">2024-2024</div>
+                    <div class="project-details">
+    <h4 class="project-name">STUDENT INFO SYSTEM</h4>
+    <p class="project-description">
+        The Student Information System is a web-based project that allows students to enroll in subjects assigned by an adviser, view their grades, and access role-based interfaces designed separately for administrators and students.
+    </p>
+    <div class="project-buttons">
+        <a href="https://github.com/MERCADO69/StudentInformationSystem"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Visit Student Info System on GitHub">
+            <button class="project-btn" type="button">
+                Visit Project in GitHub
+            </button>
+        </a>
+    </div>
+</div>
+
+                </div>
+
+                <div class="project-item">
+                    <div class="project-year">2023</div>
+                   <div class="project-details">
+    <h4 class="project-name">BUKSU GSU TRAVEL REQUEST SYSTEM</h4>
+    <p class="project-description">
+        BUKSU GSU Travel Request System is an online platform that streamlines travel requests for all offices at Bukidnon State University. Instead of visiting the GSU office or making a phone call, users can conveniently submit travel requests online, simplifying the process and saving time.
+    </p>
+    <div class="project-buttons">
+        <a href="https://www.figma.com/design/XXErWEsFDM6rHg1PfkKs40/BUSKU-GSU-Design?node-id=0-1&t=6s69HmWrlKtgvVYO-1"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="View BUKSU GSU travel request system designs">
+            <button class="project-btn" type="button">
+                View Design
+            </button>
+        </a>
+    </div>
+</div>
+
+                </div>
+            </div>
+
+            <!-- Side Projects -->
+            <div class="project-category side-projects hidden" id="sideProjects">
+                <h3 class="category-title">SIDE PROJECTS & DESIGN CREDITS</h3>
+                
+                <div class="project-item">
+                    <div class="project-year">2024</div>
+                    <div class="project-details">
+                        <h4 class="project-name">BUKSU SAVE PARKING</h4>
+                        <p class="project-description">
+                            BukSU Save Parking is a mobile application that allows users to save their parking location and easily navigate back to their parked vehicle using the built in navigation feature.
+                        </p>
+                        <div class="project-buttons">
+    <a href="https://mercado69.github.io/BUKSU-SAVE-PARKING/" title="Visit BukSU Save Parking website">
+        <button class="project-btn" type="button">
+            Project Web
+        </button>
+    </a>
+
+    <a href="https://www.figma.com/design/mA4ZmPUpHXHWpv0meiDvVR/App-Dev-Onboarding?m=auto&t=BO4a8mpli3Vbl4Ca-6" title="View BukSU Save Parking designs">
+        <button class="project-btn" type="button">
+            View Design
+        </button>
+    </a>
+</div>
+
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-year">2024</div>
+                    <div class="project-details">
+                        <h4 class="project-name">SHOP GUARD</h4>
+                        <p class="project-description">
+                            Shopguard is a mobile-friendly application project designed to help users control shopping addiction by tracking spending habits, setting limits, and providing streaks or warnings when users are close to exceeding their set budget, encouraging smarter spending decisions in real time.
+                        </p>
+                        <div class="project-buttons">
+    <a href="https://www.figma.com/design/LBL1l5Ka66BuH6zmwP69P4/SHOP-GUARD?m=auto&t=BO4a8mpli3Vbl4Ca-6" title="View Shop Guard application designs">
+        <button class="project-btn" type="button">
+            View Design
+        </button>
+    </a>
+</div>
+
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-year">2021</div>
+                    <div class="project-details">
+                        <h4 class="project-name">MIX AND MATCH FURNITURES</h4>
+                        <p class="project-description">
+                            Mix & Match Furnitures is a proposed online furniture shopping application that allows users to browse and customize furniture based on their personal style, tailor items to their preferences, and receive smarter recommendations by setting their room size for a better fit and layout.
+                        </p>
+                        <div class="project-buttons">
+    <a href="https://www.figma.com/design/2Mq5q1j4U1f5jmjbsV9FGr/Mix-and-Match-Furnitures?m=auto&t=BO4a8mpli3Vbl4Ca-6" title="View Mix and Match Furnitures designs">
+        <button class="project-btn" type="button">
+            View Design
+        </button>
+    </a>
+</div>
+
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-year">2025</div>
+                    <div class="project-details">
+                        <h4 class="project-name">BUKID+ EXPLORE THE UNSEEN</h4>
+                        <p class="project-description">
+                            BukSU Save Parking is a mobile application that allows users to save their parking location and easily navigate back to their parked vehicle using the built in navigation feature.
+                        </p>
+                       <div class="project-buttons">
+    <a href="https://github.com/DookieMercado/Bukidplusv2.git" title="Visit Bukid+ project on GitHub">
+        <button class="project-btn" type="button">
+            View Design
+        </button>
+    </a>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- See More Button -->
+        <div class="see-more-container">
+            <button class="see-more-btn" id="seeMoreBtn" type="button" title="Show more projects">See More Projects</button>
+        </div>
+
+        <!-- Bottom Image Section -->
+       <div class="project-showcase">
+    <div class="showcase-image">
+        <a href="https://www.facebook.com/share/p/1BbxdVJnfJ/" target="_blank" rel="noopener">
+            <img src="images/dDesign.jpg" alt="IT Students Appreciation Design">
+        </a>
+    </div>
+    <p class="showcase-caption">
+        While graphic design isn't my forte, I put together this appreciation post for my fellow IT students to celebrate how we made difficult things good and got them done.
+    </p>
+</div>
+
+
+  <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="skills-title">SKILLS</h2>
+        
+        <div class="skills-container">
+            <div class="skills-text">
+                <p>
+                    My journey started with designing interfaces in <span class="skill-highlight" data-skill="figma">Figma</span>, experimenting with both web and mobile layouts, then I brought those designs to life using <span class="skill-highlight" data-skill="html">HTML</span> and <span class="skill-highlight" data-skill="css">CSS</span> and <span class="skill-highlight" data-skill="javascript">JavaScript</span> while managing my projects with <span class="skill-highlight" data-skill="git">Git</span> and <span class="skill-highlight" data-skill="github">GitHub</span>. Curious about how things work behind the scenes, I explored <span class="skill-highlight" data-skill="php">PHP</span> and <span class="skill-highlight" data-skill="mysql">MySQL</span> for backend basics. I later discovered <span class="skill-highlight" data-skill="laravel">Laravel</span>, which showed me how secure logins and frameworks make development easier. Along the way, I expanded into mobile apps using <span class="skill-highlight" data-skill="react">React Native</span>, <span class="skill-highlight" data-skill="expo">Expo</span>, and <span class="skill-highlight" data-skill="android">Android Studio</span>, blending design and development to create experiences across platforms.
+                </p>
+            </div>
+
+            <div class="tech-stack">
+                <h3 class="tech-stack-title">MY CURRENT TECH STACK</h3>
+                
+                <div class="tech-grid">
+                    <div class="tech-item" data-tech="html">
+                        <div class="tech-icon">
+                            <img src="images/html.png" alt="HTML5 Logo">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item" data-tech="css">
+                        <div class="tech-icon">
+                            <img src="images/css.png" alt="CSS3 Logo">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item" data-tech="figma">
+                        <div class="tech-icon">
+                            <img src="images/figma.png" alt="Figma Logo">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item" data-tech="react">
+                        <div class="tech-icon">
+                            <img src="images/react.png" alt="React Logo">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item" data-tech="javascript">
+                        <div class="tech-icon">
+                            <img src="images/javascript.png" alt="JavaScript Logo">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item" data-tech="php">
+                        <div class="tech-icon">
+                            <img src="images/php.png" alt="PHP Logo">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item" data-tech="mysql">
+                        <div class="tech-icon">
+                            <img src="images/mysql.png" alt="MySQL Logo">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item" data-tech="laravel">
+                        <div class="tech-icon">
+                            <img src="images/laravel.png" alt="Laravel Logo">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item" data-tech="github">
+                        <div class="tech-icon">
+                            <img src="images/github.png" alt="GitHub Logo">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item" data-tech="git">
+                        <div class="tech-icon">
+                            <img src="images/git.png" alt="Git Logo">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item" data-tech="android">
+                        <div class="tech-icon">
+                            <img src="images/android.png" alt="Android Studio Logo">
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item" data-tech="expo">
+                        <div class="tech-icon">
+                            <img src="images/expo.png" alt="Expo Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certificates-quote">
+                <p>My hands are ready, my will is wide. To learn, to stretch, to grow.</p>
+                <p>For the greatest skill I hold inside is the hunger to always know.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates" id="certificates">
+
+        <h2 class="certificates-title">MY CERTIFICATES</h2>
+
+        <div class="certificates-grid">
+    <div class="certificate-item full-width">
+        ACCENTURE DIGITAL SKILLS: USER EXPERIENCE
+    </div>
+    
+    <div class="certificate-item half-width">
+        TOPCIT KOREA LV2
+    </div>
+    <div class="certificate-item half-width">
+        TESDA CSS: NC2 PROFICIENCY
+    </div>
+    
+    <div class="certificate-item full-width">
+        LEARNIFY: UI/UX FULL COURSE
+    </div>
+
+    <div class="certificate-item full-width">
+        BRING YOUR OWN LAPTOP: FIGMA UI/UX DESIGN
+    </div>
+    
+    <div class="certificate-item full-width">
+        AJ SMART: FIGMA UI DESIGN IN 24 MINUTES
+    </div>
+    
+    <!-- Wrap Cisco certificates in a container -->
+    <div class="cisco-row full-width">
+        <div class="certificate-item cisco-item">
+            CISCO: ITCS
+        </div>
+        <div class="certificate-item cisco-item">
+            CISCO: ITN
+        </div>
+        <div class="certificate-item cisco-item">
+            CISCO: SRWE
+        </div>
+    </div>
+
+</div>
+    </section>
+
+    <!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2 class="contact-title">CONTACT</h2>
+    
+    <div class="contact-container">
+        <!-- Gmail -->
+        <a href="mailto:mercadodavy32@gmail.com" class="contact-item">
+            <div class="contact-icon">
+                <img src="./images/gmail.png" alt="Gmail" class="contact-img">
+            </div>
+            <div class="contact-info">
+                <h3>Gmail</h3>
+                <span>mercadodavy32@gmail.com</span>
+            </div>
+        </a>
+
+        <!-- Telegram -->
+        <a href="https://t.me/DJLLMercado" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <div class="contact-icon">
+                <img src="./images/telegram.png" alt="Telegram" class="contact-img">
+            </div>
+            <div class="contact-info">
+                <h3>Telegram</h3>
+                <span>@DJLLMercado</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+
+    </div>
+</section>
+
+<div id="rgbOverlay"></div>
+<script src="script.js"></script>
+</body>
+
+
+</html>
