@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJIM - Portfolio</title>
+    <title>DJLLM - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
@@ -349,50 +349,57 @@
         </div>
     </section>
 
-    <!-- Certificates Section -->
-    <section class="certificates" id="certificates">
+<!-- Certificates Section -->
+<section class="certificates" id="certificates">
 
-        <h2 class="certificates-title">MY CERTIFICATES</h2>
+    <h2 class="certificates-title">MY CERTIFICATES</h2>
 
-        <div class="certificates-grid">
-    <div class="certificate-item full-width">
-        ACCENTURE DIGITAL SKILLS: USER EXPERIENCE
-    </div>
-    
-    <div class="certificate-item half-width">
-        TOPCIT KOREA LV2
-    </div>
-    <div class="certificate-item half-width">
-        TESDA CSS: NC2 PROFICIENCY
-    </div>
-    
-    <div class="certificate-item full-width">
-        LEARNIFY: UI/UX FULL COURSE
-    </div>
-
-    <div class="certificate-item full-width">
-        BRING YOUR OWN LAPTOP: FIGMA UI/UX DESIGN
-    </div>
-    
-    <div class="certificate-item full-width">
-        AJ SMART: FIGMA UI DESIGN IN 24 MINUTES
-    </div>
-    
-    <!-- Wrap Cisco certificates in a container -->
-    <div class="cisco-row full-width">
-        <div class="certificate-item cisco-item">
-            CISCO: ITCS
+    <div class="certificates-grid">
+        <div class="certificate-item full-width" data-certificate="accenture">
+            ACCENTURE DIGITAL SKILLS: USER EXPERIENCE
         </div>
-        <div class="certificate-item cisco-item">
-            CISCO: ITN
+        
+        <div class="certificate-item half-width" data-certificate="topcit">
+            TOPCIT KOREA LV2
         </div>
-        <div class="certificate-item cisco-item">
-            CISCO: SRWE
+        <div class="certificate-item half-width" data-certificate="tesda">
+            TESDA CSS: NC2 PROFICIENCY
+        </div>
+        
+        <div class="certificate-item full-width" data-certificate="learnify">
+            LEARNIFY: UI/UX FULL COURSE
+        </div>
+
+        <div class="certificate-item full-width" data-certificate="byol">
+            BRING YOUR OWN LAPTOP: FIGMA UI/UX DESIGN
+        </div>
+        
+        <div class="certificate-item full-width" data-certificate="ajsmart">
+            AJ SMART: FIGMA UI DESIGN IN 24 MINUTES
+        </div>
+
+        
+        <!-- Wrap Cisco certificates in a container -->
+        <div class="cisco-row full-width">
+            <div class="certificate-item cisco-item" data-certificate="cisco-itcs">
+                CISCO: ITCS
+            </div>
+            <div class="certificate-item cisco-item" data-certificate="cisco-itn">
+                CISCO: ITN
+            </div>
+            <div class="certificate-item cisco-item" data-certificate="cisco-srwe">
+                CISCO: SRWE
+            </div>
         </div>
     </div>
 
-</div>
-    </section>
+    <!-- Simple Image Modal -->
+    <div class="modal-overlay" id="certificateModal">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <img class="modal-image" id="modalImage" src="" alt="Certificate Preview">
+    </div>
+
+</section>
 
     <!-- Contact Section -->
 <section class="contact" id="contact">

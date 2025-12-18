@@ -153,3 +153,60 @@ document.addEventListener('mousemove', (e) => {
     // Reduce the radius to make highlight smaller
     rgbOverlay.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(24,201,217,0.2), transparent 20%)`;
 });
+// Certificate images data (replace with your actual certificate images)
+// Certificate images data - BASED ON YOUR FOLDER STRUCTURE
+const certificateImages = {
+    'accenture': 'certificates/digital.png', // ACCENTURE DIGITAL SKILLS: USER EXPERIENCE
+    'topcit': 'certificates/Topcit.png', // TOPCIT KOREA LV2
+    'tesda': 'certificates/nc2.jpg', // TESDA CSS: NC2 PROFICIENCY
+    'learnify': 'certificates/Learnify.png', // LEARNIFY: UI/UX FULL COURSE
+    'byol': 'certificates/bring.png', // BRING YOUR OWN LAPTOP: FIGMA UI/UX DESIGN
+    'ajsmart': 'certificates/ajsmart.png', // AJ SMART: FIGMA UI DESIGN IN 24 MINUTES
+    'cisco-itcs': 'certificates/cyber.png', // CISCO: ITCS
+    'cisco-itn': 'certificates/itn.png', // CISCO: ITN
+    'cisco-srwe': 'certificates/srwe.png' // CISCO: SRWE
+};
+
+// Get elements
+const modal = document.getElementById('certificateModal');
+const modalImage = document.getElementById('modalImage');
+const closeModal = document.getElementById('closeModal');
+
+// Add data attributes to your HTML elements (you need to update your HTML)
+// For now, let me show you how to add them:
+
+// First, update your HTML by adding data attributes:
+// Example: <div class="certificate-item full-width" data-certificate="accenture">
+
+// After adding data attributes, add click events:
+document.querySelectorAll('.certificate-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const certId = this.getAttribute('data-certificate');
+        if (certId && certificateImages[certId]) {
+            modalImage.src = certificateImages[certId];
+            modalImage.alt = this.textContent.trim() + ' Certificate';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+    });
+});
+
+// Close modal
+closeModal.addEventListener('click', closeModalFunc);
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModalFunc();
+    }
+});
+
+// Close with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModalFunc();
+    }
+});
+
+function closeModalFunc() {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
