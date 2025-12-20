@@ -288,3 +288,52 @@ document.addEventListener('DOMContentLoaded', () => {
     initCertificateModal();
     initScrollReveal();
 });
+// ===================== PDF Modal =====================
+function initPdfModal() {
+    const pdfModal = document.getElementById('pdfModal');
+    const pdfCloseBtn = document.querySelector('.pdf-close-btn');
+    const pdfViewer = document.getElementById('pdfViewer');
+    const viewResumeBtn = document.getElementById('viewResumeBtn');
+    
+    // PDF file path
+    const pdfUrl = 'files/ResumeM.pdf'; // Your PDF file path
+    
+    // Open PDF modal
+    viewResumeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openPdfModal();
+    });
+    
+    function openPdfModal() {
+        // Set the PDF as the iframe source
+        pdfViewer.src = pdfUrl;
+        pdfModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closePdfModal() {
+        pdfModal.classList.remove('active');
+        pdfViewer.src = ''; // Clear the iframe source
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Close button
+    pdfCloseBtn.addEventListener('click', closePdfModal);
+    
+    // Close when clicking outside
+    pdfModal.addEventListener('click', function(e) {
+        if (e.target === pdfModal) {
+            closePdfModal();
+        }
+    });
+    
+    // Close with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && pdfModal.classList.contains('active')) {
+            closePdfModal();
+        }
+    });
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', initPdfModal);

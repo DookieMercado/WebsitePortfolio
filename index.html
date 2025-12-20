@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="./images/LOG.svg" type="image/x-icon">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.viewer.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -27,15 +29,30 @@
     </button>
 
     <ul class="nav-links" id="navLinks">
-        <li><a href="#home" data-number="00.">Home</a></li>
-        <li><a href="#about" data-number="01.">About</a></li>
-        <li><a href="#projects" data-number="02.">Projects</a></li>
-        <li><a href="#skills" data-number="03.">Skills</a></li>
-        <li><a href="#contact" data-number="04.">Contact</a></li>
-        <li>
-            <a href="files/ResumeM.pdf" download class="resume-btn" title="Download Resume">Resume</a>
-        </li>
-    </ul>
+    <li><a href="#home" data-number="00.">Home</a></li>
+    <li><a href="#about" data-number="01.">About</a></li>
+    <li><a href="#projects" data-number="02.">Projects</a></li>
+    <li><a href="#skills" data-number="03.">Skills</a></li>
+    <li><a href="#contact" data-number="04.">Contact</a></li>
+    <li>
+        <!-- Simple modal trigger -->
+        <a href="#" class="resume-btn" id="viewResumeBtn" title="View Resume">Resume</a>
+    </li>
+</ul>
+
+<!-- Simple PDF Modal -->
+<div id="pdfModal" class="pdf-modal">
+    <div class="pdf-modal-content">
+        <div class="pdf-modal-header">
+            <h3>My Resume</h3>
+            <button class="pdf-close-btn">&times;</button>
+        </div>
+        <div class="pdf-modal-body">
+            <!-- PDF will be embedded here -->
+            <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
 </nav>
 
 
