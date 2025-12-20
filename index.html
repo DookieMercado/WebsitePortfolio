@@ -35,21 +35,26 @@
     <li><a href="#skills" data-number="03.">Skills</a></li>
     <li><a href="#contact" data-number="04.">Contact</a></li>
     <li>
-        <!-- Simple modal trigger -->
         <a href="#" class="resume-btn" id="viewResumeBtn" title="View Resume">Resume</a>
     </li>
 </ul>
 
-<!-- Simple PDF Modal -->
+<!-- PDF Modal -->
 <div id="pdfModal" class="pdf-modal">
     <div class="pdf-modal-content">
         <div class="pdf-modal-header">
             <h3>My Resume</h3>
-            <button class="pdf-close-btn">&times;</button>
+            <button class="pdf-close-btn" aria-label="Close modal">&times;</button>
         </div>
         <div class="pdf-modal-body">
-            <!-- PDF will be embedded here -->
-            <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+            <!-- Fixed iframe with accessible title -->
+            <iframe 
+                id="pdfViewer" 
+                src="" 
+                frameborder="0"
+                title="PDF document viewer - My Resume"
+                allow="autoplay"
+            ></iframe>
         </div>
     </div>
 </div>
