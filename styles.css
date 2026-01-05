@@ -120,15 +120,52 @@ nav {
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: #18C9D9;
+    min-height: 4.8rem; /* FIX: Set minimum height for desktop (1 line) */
 }
 
+/* Responsive fixes */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3rem;
+        min-height: 7.2rem; /* FIX: Account for 2 lines on tablet (3rem * 1.2 * 2) */
+    }
+    .hero-name {
+        font-size: 4rem;
+    }
+}
 
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: #FFFFFF;
-    font-weight: 500;
-    text-align: right;
-    margin-top: 1rem;
+@media (max-width: 768px) {
+    .hero {
+        padding: 8rem 2rem 6rem 2rem;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+        min-height: 6rem; /* FIX: Account for 2 lines on mobile (2.5rem * 1.2 * 2) */
+        line-height: 1.2;
+    }
+    .hero-name {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+        min-height: 4.8rem; /* FIX: Account for 2 lines on small mobile */
+    }
+    .hero-name {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.8rem;
+        min-height: 4.4rem; /* FIX: Account for 2 lines on very small mobile */
+    }
+    .hero-name {
+        font-size: 2.5rem;
+    }
 }
 
 /* About Section */
