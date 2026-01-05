@@ -158,6 +158,8 @@ function initScrollReveal() {
     window.addEventListener('resize', () => { revealOnScroll(); staggerReveal(); });
 }
 
+
+
 // ===================== Initialize Everything =====================
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
