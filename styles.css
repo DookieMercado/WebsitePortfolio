@@ -218,6 +218,7 @@ nav {
 .highlight {
     color: #18C9D9;
     font-weight: 500;
+
 }
 
 /* Projects Section */
@@ -293,6 +294,7 @@ nav {
     font-weight: 500;
     color: #FFFFFF;
     opacity: 0.8;
+    padding-left: 28px;
 }
 
 .project-details {

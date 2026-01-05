@@ -168,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
 });
 
+
 // ===================== PDF Modal =====================
 function initPdfModal() {
     const pdfModal = document.getElementById('pdfModal');
