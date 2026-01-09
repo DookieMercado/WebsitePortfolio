@@ -637,16 +637,7 @@ nav {
     width: 100%;
 }
 
-.certificates-title::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, #18C9D9, transparent);
-}
+
 
 .certificates-grid {
     display: grid;
