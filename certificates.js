@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ajsmart: 'certificates/ajsmart.png',
         'cisco-itcs': 'certificates/cyber.png',
         'cisco-itn': 'certificates/itn.png',
-        'cisco-srwe': 'certificates/srwe.png'
+        'cisco-srwe': 'certificates/srwe.png',
+        'cisco-ensa': 'certificates/ensa.png',
     };
 
     certificates.forEach(cert => {
