@@ -1,7 +1,7 @@
 // Loop version - types, pauses, deletes, repeats
 document.addEventListener('DOMContentLoaded', function() {
     const typedTextElement = document.getElementById('typed-text');
-    const fullText = "I Design Mobile and Web Interface.";
+    const fullText = "I Design and Code Mobile and Web Interfaces.";
     
     if (!typedTextElement) return;
     
