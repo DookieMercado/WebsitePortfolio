@@ -1,5 +1,5 @@
 html {
-    scroll-behavior: auto; /* Disable browser's default smooth scroll */
+    scroll-behavior: auto; 
 }
 * {
     margin: 0;
@@ -23,7 +23,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 5rem; /* Reduced from 2rem to 1rem for top/bottom */
+    padding: 0.75rem 5rem; 
     position: fixed;
     top: 0;
     left: 0;
@@ -72,7 +72,7 @@ nav {
 }
 
 .resume-btn {
-    display: inline-block;        /* ensures <a> behaves like a button */
+    display: inline-block;        
     padding: 0.75rem 1.75rem;
     border: 2px solid #18C9D9;
     background: transparent;
@@ -82,7 +82,7 @@ nav {
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 4px;
-    text-decoration: none;        /* remove underline from <a> */
+    text-decoration: none;        
 }
 
 .resume-btn:hover {
@@ -120,14 +120,14 @@ nav {
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: #18C9D9;
-    min-height: 4.8rem; /* FIX: Set minimum height for desktop (1 line) */
+    min-height: 4.8rem; 
 }
 
 /* Responsive fixes */
 @media (max-width: 992px) {
     .hero-title {
         font-size: 3rem;
-        min-height: 7.2rem; /* FIX: Account for 2 lines on tablet (3rem * 1.2 * 2) */
+        min-height: 7.2rem; 
     }
     .hero-name {
         font-size: 4rem;
@@ -140,7 +140,7 @@ nav {
     }
     .hero-title {
         font-size: 2.5rem;
-        min-height: 6rem; /* FIX: Account for 2 lines on mobile (2.5rem * 1.2 * 2) */
+        min-height: 6rem; 
         line-height: 1.2;
     }
     .hero-name {
@@ -151,7 +151,7 @@ nav {
 @media (max-width: 576px) {
     .hero-title {
         font-size: 2rem;
-        min-height: 4.8rem; /* FIX: Account for 2 lines on small mobile */
+        min-height: 4.8rem; 
     }
     .hero-name {
         font-size: 3rem;
@@ -161,7 +161,7 @@ nav {
 @media (max-width: 400px) {
     .hero-title {
         font-size: 1.8rem;
-        min-height: 4.4rem; /* FIX: Account for 2 lines on very small mobile */
+        min-height: 4.4rem; 
     }
     .hero-name {
         font-size: 2.5rem;
@@ -190,7 +190,7 @@ nav {
 
 /* Circular container (ring + background) */
 .image-placeholder {
-    width: min(360px, 85vw);   /* responsive */
+    width: min(360px, 85vw);   
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 
@@ -198,7 +198,7 @@ nav {
     background: rgba(24, 201, 217, 0.08);
 
     padding: 16px;
-    box-sizing: border-box;    /* 🔑 prevents overflow */
+    box-sizing: border-box;    
 
     display: flex;
     justify-content: center;
@@ -207,13 +207,13 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect (desktop only feel) */
+
 .image-placeholder:hover {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(24, 201, 217, 0.4);
 }
 
-/* Actual image */
+
 .about-photo {
     width: 100%;
     height: 100%;
@@ -222,7 +222,6 @@ nav {
     display: block;
 }
 
-/* ================= MOBILE FIX ================= */
 
 @media (max-width: 768px) {
     .image-placeholder {
@@ -259,8 +258,6 @@ nav {
 }
 
 
-
-/* Projects Section */
 .projects {
     padding: 5rem 5rem;
     max-width: 1400px;
@@ -413,7 +410,7 @@ nav {
     color: #0f1123;
 }
 
-/* Project Showcase */
+
 .project-showcase {
     margin-top: 5rem;
     display: flex;
@@ -462,7 +459,6 @@ nav {
     opacity: 0.9;
 }
 
-/* ===================== Skills Section ===================== */
 .skills {
     padding: 5rem;
     max-width: 1400px;
@@ -504,7 +500,7 @@ nav {
     text-shadow: 0 0 10px rgba(24, 201, 217, 0.5);
 }
 
-/* ===================== Tech Stack Grid ===================== */
+
 .tech-stack {
     display: flex;
     flex-direction: column;
@@ -526,7 +522,6 @@ nav {
     justify-items: center;
 }
 
-/* ===================== Tech Item ===================== */
 .tech-item {
     width: 100px;
     height: 100px;
@@ -542,7 +537,7 @@ nav {
     z-index: 10;
 }
 
-/* Pulse effect */
+
 .tech-item.highlight::before {
     content: '';
     position: absolute;
@@ -569,7 +564,6 @@ nav {
     }
 }
 
-/* ===================== Tech Icon ===================== */
 .tech-icon {
     width: 100%;
     height: 100%;
@@ -706,18 +700,18 @@ nav {
     background: linear-gradient(135deg, #15b0bd 0%, #18C9D9 100%);
 }
 
-/* Add alternating animations */
+
 .certificate-item:nth-child(even):hover {
     transform: translateY(-15px) rotate(-2deg);
 }
 
-/* Special styles for specific certificates */
+
 .certificate-item.full-width:first-child {
     font-size: 1.2rem;
     padding: 4rem 3rem;
 }
 
-/* Cisco row container */
+
 .cisco-row {
     grid-column: 1 / -1;
     display: grid;
@@ -741,7 +735,7 @@ nav {
     background: linear-gradient(135deg, #15b0bd 0%, #18C9D9 100%);
 }
 
-/* Responsive Design for Certificates */
+
 @media (max-width: 968px) {
     .certificates-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -796,13 +790,13 @@ nav {
         padding: 3rem 2rem;
     }
 
-    /* Responsive - Stack Cisco certs on mobile */
+
     .cisco-row {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 }
-/* ===== SIMPLE IMAGE MODAL ===== */
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -822,7 +816,7 @@ nav {
     display: flex;
 }
 
-/* Close button */
+
 .modal-close {
     position: fixed;
     top: 30px;
@@ -849,7 +843,7 @@ nav {
     box-shadow: 0 5px 20px rgba(24, 201, 217, 0.6);
 }
 
-/* Modal image */
+
 .modal-image {
     max-width: 90%;
     max-height: 90vh;
@@ -870,7 +864,7 @@ nav {
     }
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .modal-close {
         top: 20px;
@@ -886,7 +880,7 @@ nav {
 }
 
 
-/* Contact Section */
+
 .contact {
     padding: 5rem 5rem;
     max-width: 1400px;
@@ -905,7 +899,7 @@ nav {
 .contact-container {
     display: flex;
     justify-content: center;
-    align-items: stretch; /* make all items same height */
+    align-items: stretch; 
     gap: 3rem;
     flex-wrap: wrap;
 }
@@ -921,10 +915,10 @@ nav {
     border-radius: 15px;
     transition: all 0.4s ease;
     cursor: pointer;
-    flex: 1 1 250px; /* equal width for all cards */
-    max-width: 300px; /* optional max width */
-     text-decoration: none; /* removes underline for the whole card */
-    color: inherit;        /* keep text colors defined in .contact-info */
+    flex: 1 1 250px; 
+    max-width: 300px; 
+     text-decoration: none; 
+    color: inherit;       
 }
 
 
@@ -985,7 +979,7 @@ nav {
 }
 
 
-/* Responsive Design for Contact */
+
 @media (max-width: 968px) {
     .contact-container {
         grid-template-columns: repeat(2, 1fr);
@@ -1026,7 +1020,7 @@ nav {
     }
 }
 
-/* Mobile Menu Toggle */
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -1060,13 +1054,13 @@ nav {
 }
 
 
-/* Optional: slight pop on hover */
+
 .contact-item:hover .contact-icon img {
     transform: scale(1.05);
 }
 
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     nav {
         padding: 1.5rem 2rem;
@@ -1087,7 +1081,7 @@ nav {
         justify-content: center;
         align-items: center;
         transition: right 0.3s ease;
-        -webkit-backdrop-filter: blur(10px); /* Safari support */
+        -webkit-backdrop-filter: blur(10px); 
         backdrop-filter: blur(10px);
     }
 
@@ -1282,7 +1276,7 @@ nav {
     animation-delay: 0.5s;
 }
 
-/* Screen reader only class for accessibility */
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -1301,11 +1295,11 @@ nav {
 }
 
 .logo-img {
-    height: 50px; /* adjust to fit your nav */
+    height: 50px; 
     width: auto;
 }
 
-/* PROJECT COMMISSIONS - All Cards Equal */
+
 .commissions-section {
     background: #1D1F33;
     color: white;
@@ -1327,7 +1321,7 @@ nav {
     background: linear-gradient(90deg, #18C9D9, #0EA5E9, #18C9D9);
 }
 
-/* Container */
+
 .commissions-container {
     max-width: 900px;
     margin: 0 auto;
@@ -1335,7 +1329,7 @@ nav {
     z-index: 1;
 }
 
-/* Header */
+
 .commissions-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -1372,7 +1366,7 @@ nav {
     margin: 0 auto;
 }
 
-/* Services Grid - ALL CARDS EQUAL */
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1396,11 +1390,11 @@ nav {
     box-shadow: 0 10px 30px rgba(24, 201, 217, 0.15);
 }
 
-/* FIX FOR ICON ALIGNMENT */
+
 .service-icon {
     margin-bottom: 1.5rem;
     display: flex;
-    justify-content: center; /* This centers the icon */
+    justify-content: center; 
     width: 100%;
 }
 
@@ -1414,7 +1408,6 @@ nav {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    /* Remove display: inline-block if it exists */
 }
 
 .service-card:hover .service-icon .icon {
@@ -1606,7 +1599,7 @@ nav {
     }
 }
 
-/* ===================== Scroll Reveal Animations ===================== */
+
 .reveal-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -1618,7 +1611,7 @@ nav {
     transform: translateY(0);
 }
 
-/* Staggered animations */
+
 .stagger-reveal {
     opacity: 0;
     transform: translateY(20px);
@@ -1631,7 +1624,7 @@ nav {
     transform: translateY(0);
 }
 
-/* Directional animations */
+
 .fade-in-left {
     transform: translateX(-50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -1647,7 +1640,6 @@ nav {
     transform: translateX(0);
 }
 
-/* Specific element animations */
 .project-card.reveal-on-scroll {
     transform: translateY(40px) rotateX(5deg);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -1665,9 +1657,9 @@ nav {
 .certificate-item.reveal-on-scroll.revealed {
     transform: scale(1);
 }
-/* ===================== Project Section Animations ===================== */
 
-/* Section title animation */
+
+
 .section-title.reveal-on-scroll {
     opacity: 0;
     transform: translateY(40px);
@@ -1679,7 +1671,7 @@ nav {
     transform: translateY(0);
 }
 
-/* Category title animation */
+
 .category-title.reveal-on-scroll {
     opacity: 0;
     transform: translateX(-30px);
@@ -1691,7 +1683,7 @@ nav {
     transform: translateX(0);
 }
 
-/* Project item staggered animation */
+
 .project-reveal {
     opacity: 0;
     transform: translateY(60px) scale(0.95);
@@ -1704,7 +1696,7 @@ nav {
     transform: translateY(0) scale(1);
 }
 
-/* Project item specific animations */
+
 .project-item {
     transition: all 0.4s ease;
 }
@@ -1714,7 +1706,6 @@ nav {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Project year animation */
 .project-year.reveal-on-scroll {
     opacity: 0;
     transform: translateX(-20px);
@@ -1726,7 +1717,7 @@ nav {
     transform: translateX(0);
 }
 
-/* Project details animation */
+
 .project-details.reveal-on-scroll {
     opacity: 0;
     transform: translateX(20px);
@@ -1738,7 +1729,7 @@ nav {
     transform: translateX(0);
 }
 
-/* Project buttons animation */
+
 .project-buttons.reveal-on-scroll {
     opacity: 0;
     transform: translateY(20px);
@@ -1750,7 +1741,7 @@ nav {
     transform: translateY(0);
 }
 
-/* Side projects reveal when shown */
+
 .side-projects.show .project-item {
     animation: slideInFromRight 0.8s ease forwards;
     animation-delay: calc(var(--item-index, 0) * 0.1s);
@@ -1767,7 +1758,7 @@ nav {
     }
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .project-reveal {
         transform: translateY(40px) scale(0.98);
@@ -1778,7 +1769,7 @@ nav {
         transform: translateY(20px);
     }
 }
-/* PDF Modal Styles */
+
 .pdf-modal {
     display: none;
     position: fixed;

@@ -1,4 +1,4 @@
-// ===================== DOM Elements =====================
+
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const navLinks = document.getElementById('navLinks');
 const seeMoreBtn = document.getElementById('seeMoreBtn');
@@ -7,7 +7,7 @@ const skillHighlights = document.querySelectorAll('.skill-highlight');
 const techItems = document.querySelectorAll('.tech-item');
 const rgbOverlay = document.getElementById('rgbOverlay');
 
-// ===================== Data and Maps =====================
+
 const skillTechMap = {
     'figma': 'figma',
     'html': 'html',
@@ -23,7 +23,7 @@ const skillTechMap = {
     'android': 'android'
 };
 
-// ===================== Utility Functions =====================
+
 function easeInOutQuad(t) {
     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
@@ -57,7 +57,7 @@ function isElementInViewport(el) {
     );
 }
 
-// ===================== Mobile Menu =====================
+
 function initMobileMenu() {
     if (!mobileMenuToggle || !navLinks) return;
     
@@ -76,7 +76,7 @@ function initMobileMenu() {
     });
 }
 
-// ===================== Smooth Scrolling =====================
+
 function initSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -86,7 +86,7 @@ function initSmoothScrolling() {
     });
 }
 
-// ===================== See More Projects =====================
+
 function initSeeMoreProjects() {
     if (!seeMoreBtn || !sideProjects) return;
     
@@ -107,7 +107,7 @@ function initSeeMoreProjects() {
     });
 }
 
-// ===================== Skills Highlight =====================
+
 function initSkillsHighlight() {
     skillHighlights.forEach(highlight => {
         highlight.addEventListener('mouseenter', () => {
@@ -124,7 +124,7 @@ function initSkillsHighlight() {
     });
 }
 
-// ===================== Scroll Reveal Animations =====================
+
 function revealOnScroll() {
     document.querySelectorAll('.reveal-on-scroll').forEach(el => {
         if (isElementInViewport(el)) el.classList.add('revealed');
@@ -160,7 +160,7 @@ function initScrollReveal() {
 
 
 
-// ===================== Initialize Everything =====================
+
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initSmoothScrolling();
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// ===================== PDF Modal =====================
+
 function initPdfModal() {
     const pdfModal = document.getElementById('pdfModal');
     const pdfCloseBtn = document.querySelector('.pdf-close-btn');
