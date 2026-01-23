@@ -177,7 +177,7 @@ function initPdfModal() {
     const pdfCloseBtn = document.querySelector('.pdf-close-btn');
     const pdfViewer = document.getElementById('pdfViewer');
     const viewResumeBtn = document.getElementById('viewResumeBtn');
-    const pdfUrl = 'files/ResumeM.pdf';
+    const pdfUrl = 'files/ResumeM1.pdf';
 
     viewResumeBtn.addEventListener('click', e => {
         e.preventDefault();
