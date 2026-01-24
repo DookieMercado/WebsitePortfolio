@@ -411,54 +411,6 @@ nav {
 }
 
 
-.project-showcase {
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-.showcase-image {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 2px solid rgba(24, 201, 217, 0.3);
-    background: rgba(24, 201, 217, 0.05);
-    transition: all 0.4s ease;
-    cursor: pointer;
-}
-
-.showcase-image:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: rgba(24, 201, 217, 0.8);
-    box-shadow: 0 15px 40px rgba(24, 201, 217, 0.4);
-}
-
-.showcase-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: all 0.4s ease;
-}
-
-.showcase-image:hover img {
-    transform: scale(1.05);
-}
-
-.showcase-caption {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #FFFFFF;
-    text-align: center;
-    max-width: 700px;
-    line-height: 1.7;
-    opacity: 0.9;
-}
-
 .skills {
     padding: 5rem;
     max-width: 1400px;
