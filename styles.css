@@ -552,24 +552,20 @@ nav {
 
 .certificates-quote {
     text-align: center;
-    margin-bottom: 4rem;
-    padding: 2rem 3rem;
-    background: rgba(24, 201, 217, 0.05);
-    border-left: 4px solid #18C9D9;
-    border-radius: 10px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2rem auto; 
+    max-width: 900px;  
+    padding: 0;        
 }
 
 .certificates-quote p {
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: #18C9D9;
-    line-height: 2;
-    opacity: 1;
-    font-style: italic;
+    font-size: 1rem;
+    font-weight: normal;
+    color: inherit;    
+    line-height: 1.5;  
+    font-style: normal; 
+    margin: 0.5rem 0;  
 }
+
 
 .certificates-title {
     font-size: 2.8rem;
@@ -667,7 +663,7 @@ nav {
 .cisco-row {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
     padding: 0;
     background: transparent !important;

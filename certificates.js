@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         'cisco-itn': 'certificates/itn.png',
         'cisco-srwe': 'certificates/srwe.png',
         'cisco-ensa': 'certificates/ensa.png',
+        'cisco-wad': 'certificates/wad.png',
     };
 
     certificates.forEach(cert => {
