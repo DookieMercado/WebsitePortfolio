@@ -929,16 +929,9 @@ nav {
 
 
 
-@media (max-width: 968px) {
-    .contact-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-}
-
 @media (max-width: 768px) {
     .contact {
-        padding: 3rem 2rem;
+        padding: 4rem 1.5rem; 
     }
 
     .contact-title {
@@ -947,25 +940,31 @@ nav {
     }
 
     .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        flex-direction: column; 
+        align-items: center;    
+        gap: 2rem;              
     }
 
     .contact-item {
-        padding: 2.5rem 1.5rem;
-    }
-
-    .contact-icon {
-        width: 70px;
-        height: 70px;
+        width: 100%;            
+        max-width: 350px;       
+        padding: 2.5rem 1.5rem; 
+        flex: none;             
     }
 
     .contact-info h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
-    .contact-info a {
-        font-size: 0.9rem;
+    .contact-info span {
+        font-size: 1rem;
+        word-break: normal;     
+        overflow-wrap: break-word;
+    }
+
+    .contact-icon {
+        width: 80px;            
+        height: 80px;
     }
 }
 
