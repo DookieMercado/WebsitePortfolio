@@ -254,8 +254,27 @@ nav {
 .highlight {
     color: #18C9D9;
     font-weight: 500;
-
+    position: relative; /* needed for the pseudo-element */
+    text-decoration: none;
+    cursor: pointer;
 }
+
+.highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px; /* thickness of the underline */
+    background-color: #18C9D9; /* same as text color */
+    transition: width 0.3s ease;
+}
+
+.highlight:hover::after {
+    width: 100%;
+}
+
+
 
 
 .projects {
