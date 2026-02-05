@@ -463,15 +463,36 @@ nav {
 .skill-highlight {
     color: #18C9D9;
     font-weight: 500;
+    position: relative; /* needed for the pseudo-element */
+    text-decoration: none;
     cursor: pointer;
-    position: relative;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.skill-highlight:hover {
-    color: #15b0bd;
-    text-shadow: 0 0 10px rgba(24, 201, 217, 0.5);
+
+/* Underline effect */
+.skill-highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px; /* thickness of the underline */
+    background-color: #15b0bd; /* match hover color for consistency */
+    transition: width 0.3s ease;
 }
+
+/* Expand underline on hover */
+.skill-highlight:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
 
 
 .tech-stack {
