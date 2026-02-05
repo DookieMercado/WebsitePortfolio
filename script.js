@@ -87,25 +87,45 @@ function initSmoothScrolling() {
 }
 
 
-function initSeeMoreProjects() {
-    if (!seeMoreBtn || !sideProjects) return;
-    
-    seeMoreBtn.addEventListener('click', () => {
-        const isShown = sideProjects.classList.contains('show');
-        if (!isShown) {
-            sideProjects.classList.remove('hidden');
+seeMoreBtn.addEventListener('click', () => {
+    const isShown = sideProjects.classList.contains('show');
+    if (!isShown) {
+        sideProjects.classList.remove('hidden');
+        
+        requestAnimationFrame(() => {
             sideProjects.classList.add('show');
-            seeMoreBtn.textContent = 'Show Less';
-            seeMoreBtn.classList.add('active');
-        } else {
-            sideProjects.classList.remove('show');
+        });
+        
+        seeMoreBtn.textContent = 'Show Less';
+        setTimeout(() => {
+            const items = sideProjects.querySelectorAll('.project-item');
+            items.forEach(item => item.style.transitionDelay = '0s');
+        }, 1000); 
+
+    } else {
+
+    smoothScrollTo('#projects', 1000); 
+
+
+    sideProjects.classList.remove('show');
+    
+ 
+    const items = sideProjects.querySelectorAll('.project-item');
+    items.forEach(item => item.style.transitionDelay = '');
+    
+
+    seeMoreBtn.textContent = 'See More Projects';
+
+
+    setTimeout(() => {
+        if (!sideProjects.classList.contains('show')) {
             sideProjects.classList.add('hidden');
-            seeMoreBtn.textContent = 'See More Projects';
-            seeMoreBtn.classList.remove('active');
-            setTimeout(() => smoothScrollTo('#projects', 1200), 100);
         }
-    });
+    }, 1000); 
 }
+});
+
+
 
 
 function initSkillsHighlight() {
