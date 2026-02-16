@@ -190,21 +190,16 @@ nav {
 
 /* Circular container (ring + background) */
 .image-placeholder {
-    width: min(360px, 85vw);   
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-
-    border: 4px solid #18C9D9;
-    background: rgba(24, 201, 217, 0.08);
-
-    padding: 16px;
-    box-sizing: border-box;    
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: min(360px, 85vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  background: rgba(24, 201, 217, 0.08);
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -217,9 +212,10 @@ nav {
 .about-photo {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     object-fit: cover;
     display: block;
+    border-radius: 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -1908,13 +1904,14 @@ nav {
     line-height: 1.6;
 }
 
+
 .highlight {
     color: #18C9D9;
-    font-weight: inherit; /* keep the original font weight (so h3 stays bold) */
+    font-weight: inherit; 
     position: relative;
     text-decoration: none;
     cursor: pointer;
-    display: inline-block; /* ensure underline only spans the text */
+    display: inline-block; 
 }
 
 .highlight::after {
