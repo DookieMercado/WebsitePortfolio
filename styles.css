@@ -19,11 +19,11 @@ section {
     scroll-margin-top: 7rem;
 }
 
+/* Desktop nav (logo optional) */
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 5rem; 
+    padding: 0.75rem 5rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -31,6 +31,61 @@ nav {
     background: #1D1F33;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    justify-content: center; /* center nav-links if no logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+/* If logo exists, push nav-links to right */
+nav.has-logo {
+    justify-content: space-between;
+}
+
+nav.has-logo .nav-links {
+    margin-left: auto;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+    nav {
+        justify-content: flex-end; /* hamburger always on right */
+        padding: 0.75rem 2rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px; 
+        background: #1D1F33;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        display: none;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 28px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
 }
 
 .logo {
