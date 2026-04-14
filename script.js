@@ -197,7 +197,7 @@ function initPdfModal() {
     const pdfCloseBtn = document.querySelector('.pdf-close-btn');
     const pdfViewer = document.getElementById('pdfViewer');
     const viewResumeBtn = document.getElementById('viewResumeBtn');
-    const pdfUrl = 'files/ResumeMercado.pdf';
+    const pdfUrl = 'files/DavyMercadoResume.pdf';
 
     viewResumeBtn.addEventListener('click', e => {
         e.preventDefault();
