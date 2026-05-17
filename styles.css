@@ -331,6 +331,7 @@ body {
     transition: var(--transition);
     font-family: var(--font-display);
     display: inline-block;              /* keeps button naturally centered */
+    text-decoration: none;   /* removes underline */
 }
 
 .cta-button:hover {

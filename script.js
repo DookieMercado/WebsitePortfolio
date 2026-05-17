@@ -311,3 +311,4 @@ initMobileMenu();
 
 console.log('Portfolio site loaded successfully!');
 console.log('All interactive elements are ready.');
+
