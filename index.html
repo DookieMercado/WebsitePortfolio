@@ -3,616 +3,505 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJLLM - Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+    <title>Davy Mercado - UI/UX Designer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="./images/LOG.svg" type="image/x-icon">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.viewer.min.css">
+    <link rel="stylesheet" href="./resume-modal.css">
 </head>
 <body>
-
-    <nav>
-
-        
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" title="Toggle navigation menu" aria-label="Toggle navigation menu">
-            <span class="sr-only">Menu</span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home" data-number="00.">Home</a></li>
-            <li><a href="#about" data-number="01.">About</a></li>
-            <li><a href="#experience" data-number="02.">Experience</a></li>
-            <li><a href="#projects" data-number="03.">Projects</a></li>
-            <li><a href="#skills" data-number="04.">Skills</a></li>
-            <li><a href="#contact" data-number="05.">Contact</a></li>
-            <li>
-                <a href="#" class="resume-btn" id="viewResumeBtn" title="View Resume">Resume</a>
-            </li>
-        </ul>
-
-        <div id="pdfModal" class="pdf-modal">
-            <div class="pdf-modal-content">
-                <div class="pdf-modal-header">
-                    <h3>My Resume</h3>
-                    <button class="pdf-close-btn" aria-label="Close modal">&times;</button>
-                </div>
-                <div class="pdf-modal-body">
-                    <iframe 
-                        id="pdfViewer" 
-                        src="" 
-                        frameborder="0"
-                        title="PDF document viewer - My Resume"
-                        allow="autoplay"
-                    ></iframe>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="./images/logo/Logo Davy.svg" alt="Mercado Logo">
             </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume" class="resume-btn">Resume</a></li>
+            </ul>
         </div>
     </nav>
 
+    <div class="modal-overlay" id="resumeModal">
+  <div class="modal-content">
+    <button class="modal-close" id="closeResumeModal">&times;</button>
+    <iframe 
+      id="resumeIframe" 
+      src="" 
+      title="Resume PDF Viewer"
+      frameborder="0">
+    </iframe>
+  </div>
+</div>
 
-<section class="hero" id="home">
-    <div class="hero-intro">Hi, my name is</div>
-    <h1 class="hero-name">DAVY MERCADO</h1>
-    <h2 class="hero-title" id="typed-text"></h2>
-</section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Davy Mercado</h1>
+            <p class="hero-subtitle">Crafting Digital Experience that matter!</p>
+            <p class="hero-description">UX/UI Designer with 4+ years experience in building scalable designs and intuitive user interfaces. Passionate about clean and impactful design.</p>
+            <button class="cta-button">Available for Work</button>
+        </div>
+    </section>
 
-
-    <section class="about" id="about">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="about-container">
             <div class="about-image">
-                <div class="image-placeholder">
-                    <img src="./images/Me111.png" alt="My Photo" class="about-photo">
-                </div>
+                <img src="./images/DesignerImage/DavyMe.svg" alt="Davy Mercado">
             </div>
             <div class="about-content">
-                <p class="about-text">
-                    I am a designer who is deeply focused on creating clean, intuitive, and user-centered visuals, with a strong emphasis on blending <span class="highlight">creativity and functionality</span> to produce meaningful digital experiences.
-                </p>
-                <p class="about-text">
-                    I take the time to understand the purpose behind each project, the needs of the users, and the goals of the client, allowing me to design solutions that are not only <span class="highlight">visually appealing but also practical</span>, accessible, and easy to use.
-                </p>
-                <p class="about-text">
-                    Through <span class="highlight">careful attention</span> to detail, consistency, and usability, I aim to create designs that communicate clearly, enhance user engagement, and leave a lasting impression, while continuously improving my skills and adapting to new design trends and technologies.
-                </p>
+                <p class="about-text">I am a designer who is deeply focused on creating <span class="highlight">clean, intuitive, and user centered visuals</span>, with a strong emphasis on blending creativity and functionality to produce meaningful digital experiences.</p>
+                
+                <p class="about-text">I take the time to understand the purpose behind each project, the needs of the users, and the goals of the client, allowing me to design solutions that are not only <span class="highlight">visually appealing but also practical</span>, accessible, and easy to use.</p>
+                
+                <p class="about-text">Through <span class="highlight">careful attention to detail</span>, consistency, and usability, I aim to create designs that communicate clearly, enhance user engagement, and leave a lasting impression, while continuously improving my skills and adapting to new design trends and technologies.</p>
             </div>
         </div>
     </section>
 
-    <section class="experience" id="experience">
+    <!-- Experience Section -->
+<section id="experience" class="experience">
     <div class="experience-container">
-        <h2 class="section-title">JOB EXPERIENCE</h2>
+    <h2 class="section-title">Job Experience</h2>
 
-            <div class="experience-item">
-            <h3 class="exp-role highlight">Capstone Leader</h3>
-            <span class="exp-company">Team Project </span>
-            <span class="exp-date">2024 - 2026</span>
-            <p class="exp-description">
-                Led the development of a research-based community geo-tagging mobile 
-                application for reporting highway issues such as potholes and road hazards. Directed system design, feature planning, and implementation of smart reporting and route optimization features. Conducted gorilla testing with near 100% positive user feedback and secured successful client acceptance during evaluation.
-            </p>
-        </div>
+    <!-- CURRENT / MOST RECENT -->
+    <div class="experience-item">
+        <h3 class="exp-role highlight">UI/UX Designer</h3>
+        <span class="exp-company">Freelance / Remote</span>
+        <span class="exp-date">2022 – Present</span>
+        <p class="exp-description">
+            Designed user-centered web and mobile interfaces with a focus on usability, accessibility, and visual consistency. Collaborated with clients to craft engaging digital experiences and consistently delivered projects on time with a 95% customer satisfaction rate.
+        </p>
+    </div>
 
+    <!-- EARLIEST -->
+    <div class="experience-item">
+        <h3 class="exp-role highlight">UI/UX Designer Intern</h3>
+        <span class="exp-company">Project Moonshot IT Solutions</span>
+        <span class="exp-date">2026 – 2026</span>
+        <p class="exp-description">
+            Contributed to the design of user-centered interfaces by applying UI/UX principles and user-focused thinking in real-world projects. Enhanced problem-solving and design accuracy while improving digital experiences, resulting in a notable improvement in design efficiency and technical skills within 2 weeks of intensive practice.
+        </p>
+    </div>
 
-        <div class="experience-item">
-            <h3 class="exp-role highlight">UI/UX Designer</h3>
-            <span class="exp-company">Freelance / Remote</span>
-            <span class="exp-date">2022 – Present</span>
-            <p class="exp-description">
-                Designed user centered web and mobile interfaces with a focus on usability, accessibility, and visual consistency. Collaborated with clients to craft engaging digital experiences 
-                and consistently delivered projects on time with a 95% customer satisfaction rate.
-            </p>
-        </div>
+     <!-- 2024–2026 -->
+    <div class="experience-item">
+        <h3 class="exp-role highlight">Capstone Leader</h3>
+        <span class="exp-company">Team Project</span>
+        <span class="exp-date">2024 – 2026</span>
+        <p class="exp-description">
+            Led the development of a research-based community geo-tagging mobile application for reporting highway issues such as potholes and road hazards. Directed system design, feature planning, and implementation of smart reporting and route optimization features. Conducted gorilla testing with near 100% positive user feedback and secured successful client acceptance during evaluation.
+        </p>
+    </div>
 
-        <div class="experience-item">
-            <h3 class="exp-role highlight">UI/UX Designer Intern</h3>
-            <span class="exp-company">Project Moonshot IT Solutions</span>
-            <span class="exp-date">2026 - 2026</span>
-            <p class="exp-description">
-               Contributed to the design of user-centered interfaces by applying UI/UX principles and user-focused thinking in real-world projects. Enhanced problem-solving and design accuracy while improving digital experiences, resulting in a notable improvement in 
-               design efficiency and technical skills within 2 weeks of intensive practice.
-                    </p>
-        </div>
+    <!-- 2025–2026 -->
+    <div class="experience-item">
+        <h3 class="exp-role highlight">AI Video Annotator</h3>
+        <span class="exp-company">Atlas Capture (Auditor)</span>
+        <span class="exp-date">2025 – 2026</span>
+        <p class="exp-description">
+            Annotated and labeled video datasets to support AI and machine learning model training. Performed object tracking, activity labeling, and data validation while adhering to strict annotation guidelines and quality standards. Achieved a 100% accuracy score based on QA validation and quality checks.
+        </p>
+    </div>
 
-        <div class="experience-item">
-            <h3 class="exp-role highlight">AI Video Annotator</h3>
-            <span class="exp-company">Atlas Capture (Auditor)</span>
-            <span class="exp-date">2025 - 2026</span>
-            <p class="exp-description">
-                Annotated and labeled video datasets to support AI 
-                and machine learning model training. Performed object tracking, 
-                activity labeling, and data validation while adhering to strict annotation guidelines and quality standards. Achieved a 100% accuracy score based on QA validation and quality checks.
-            </p>
-        </div>
-        
+    <!-- 2026 -->
+    <div class="experience-item">
+        <h3 class="exp-role highlight">Lead Generation Specialist</h3>
+        <span class="exp-company">Freelance</span>
+        <span class="exp-date">2026 – 2026</span>
+        <p class="exp-description">
+            Sourced and verified email contacts for educational institutions, targeting key decision-makers such as school administrators and department heads. Maintained up to 95% data accuracy through rigorous research and validation, producing clean and structured lead lists for outreach.
+        </p>
+    </div>
 
-        <div class="experience-item">
-            <h3 class="exp-role highlight">Academic Mentoring Secretary/Social Media Officer</h3>
-            <span class="exp-company"></span>
-            <span class="exp-date">2026 - 2026</span>
-            <p class="exp-description">
-                Coordinated academic mentoring programs by organizing activities, managing documentation, and facilitating communication between mentors and students. Led social media 
-                efforts by creating content and increasing page engagement and reach by 64%.
-            </p>
-        </div>
-
-        <div class="experience-item">
-            <h3 class="exp-role highlight">Lead Generation Specialist</h3>
-            <span class="exp-company"></span>
-            <span class="exp-date">2024 - 2026</span>
-            <p class="exp-description">
-           Sourced and verified email contacts for educational institutions, targeting 
-           key decision-makers such as school administrators and department heads. Maintained up to 95% data accuracy through rigorous research 
-           and validation, producing clean and structured lead lists for outreach.
-            </p>
-                </div>        
-                    </div>
-                        </section>
-
-
+    <div class="experience-item">
+        <h3 class="exp-role highlight">Academic Mentoring Secretary / Social Media Officer</h3>
+        <span class="exp-company">Organization Role</span>
+        <span class="exp-date">2022 – 2026</span>
+        <p class="exp-description">
+            Coordinated academic mentoring programs by organizing activities, managing documentation, and facilitating communication between mentors and students. Led social media efforts by creating content and increasing page engagement and reach by 64%.
+        </p>
+    </div>
 
     
+        <button class="see-more-btn">See More</button>
+</div>
+    </div>
+</section>
 
-    <section class="commissions-section">
-        <div class="commissions-container">
-            <div class="commissions-header">
-                <h2 class="section-title">
-                    Open to new project opportunities
-                </h2>
-                <p class="section-subtitle">
-           Currently accepting project commissions. Delivering professional, high quality services tailored to your needs
-                </p>
-            </div>
-            
+    <!-- Open to Work Section -->
+    <section class="open-to-work">
+        <div class="work-container">
+            <h2 class="section-title">Open to Work</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <span class="icon">🎨</span>
+                        <img src="./images/Figma.png" alt="UI/UX Design">
                     </div>
                     <h3 class="service-title">UI/UX Design</h3>
                     <div class="service-tags">
                         <span class="tag">Web</span>
                         <span class="tag">Mobile</span>
                     </div>
-                    <p class="service-description">Clean, intuitive interfaces with user-centered design approach</p>
+                    <p class="service-description">Clean, intuitive interfaces with usercentered design approach</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
-                        <span class="icon">⚛️</span>
+                        <img src="./images/React.png" alt="Frontend Development">
                     </div>
-                    <h3 class="service-title">Frontend Dev</h3>
+                    <h3 class="service-title">Frontend Development</h3>
                     <div class="service-tags">
-                        <span class="tag">React Native</span>
-                        <span class="tag">Expo</span>
+                        <span class="tag">Web</span>
+                        <span class="tag">Mobile</span>
                     </div>
-                    <p class="service-description">Turning Figma designs into clean, responsive frontend interfaces Using React Framework</p>
+                    <p class="service-description">Responsive, performant web applications with modern tech stack</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
-                        <span class="icon">🌐</span>
+                        <img src="./images/Branding.jpg" alt="Branding">
                     </div>
-                    <h3 class="service-title">Portfolio Websites</h3>
+                    <h3 class="service-title">Branding</h3>
                     <div class="service-tags">
-                        <span class="tag">Personal</span>
-                        <span class="tag">Professional</span>
+                        <span class="tag">Visual</span>
+                        <span class="tag">Systems</span>
                     </div>
-                    <p class="service-description">Custom portfolio sites that showcase your work effectively</p>
-                </div>  
+                    <p class="service-description">Cohesive visual identity and design system development</p>
+                </div>
             </div>
-                    <div class="cta-button-wrapper">
-    <a href="#contact" class="cta-button">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 -960 960 960" fill="#0f1123">
-        <path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/>
-    </svg>
-    <span>Get in Touch</span>
-</a>
-
-
-
-</div>
-
         </div>
     </section>
 
-
-    <section class="projects" id="projects">
+    <!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="projects-container">
         <h2 class="section-title">PROJECTS LIST</h2>
         
-        <div class="projects-container">
-
-            <div class="project-category">
-                <h3 class="category-title">MAJOR PROJECT</h3>
-                
-                <div class="project-item">
-                    <div class="project-year">2023-2025</div>
-                    <div class="project-details">
-                        <h4 class="project-name">GEOPORT MALAYBALAY (CAPSTONE)</h4>
-                        <p class="project-description">
-                            Geoport Malaybalay is a community-driven mobile application that enables citizens to report highway and infrastructure issues, including vehicular accidents, in real time. By simply taking a picture, the app automatically geotags the reporter's location using AI-powered image processing. It also provides dynamic rerouting suggestions, helping drivers avoid hazards, improving road safety, and enabling faster response from local authorities.
-                        </p>
-                        <div class="project-buttons">
-                            <a href="https://dookiemercado.github.io/GeoportWeb/" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               title="Visit Geoport Malaybalay project website">
-                                <button class="project-btn" type="button">Project Web</button>
-                            </a>
-                            <a href="https://www.figma.com/design/fDZLLu5QiKpYQBF3w4IPh8/Untitled?node-id=0-1&t=ajYcOacKf1ZbpntI-1"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               title="View Geoport Malaybalay design mockups">
-                                <button class="project-btn" type="button">View Designs</button>
-                            </a>
-                        </div>
+        <div class="project-category">
+            <h3 class="category-title">MAJOR PROJECT</h3>
+            
+            <div class="project-item">
+                <div class="project-year">2023-2025</div>
+                <div class="project-details">
+                    <h4 class="project-name">GEOPORT MALAYBALAY (CAPSTONE)</h4>
+                    <p class="project-description">
+                        Geoport Malaybalay is a community-driven mobile application that enables citizens to report highway and infrastructure issues, including vehicular accidents, in real time. By simply taking a picture, the app automatically geotags the reporter's location using AI-powered image processing. It also provides dynamic rerouting suggestions, helping drivers avoid hazards, improving road safety, and enabling faster response from local authorities.
+                    </p>
+                    <div class="project-buttons">
+                        <a href="https://dookiemercado.github.io/GeoportWeb/" target="_blank" rel="noopener noreferrer" title="Visit Geoport Malaybalay project website">
+                            <button class="project-btn" type="button">Project Web</button>
+                        </a>
+                        <a href="https://www.figma.com/design/fDZLLu5QiKpYQBF3w4IPh8/Untitled?node-id=0-1&t=ajYcOacKf1ZbpntI-1" target="_blank" rel="noopener noreferrer" title="View Geoport Malaybalay design mockups">
+                            <button class="project-btn" type="button">View Designs</button>
+                        </a>
                     </div>
                 </div>
-
-                
-            </div>
-
-
-            <div class="project-category side-projects hidden" id="sideProjects">
-    <h3 class="category-title">MINOR PROJECTS</h3>
-
-
-
-<div class="project-item">
-        <div class="project-year">2026</div>
-        
-        <div class="project-details">
-            <h4 class="project-name">SELLA</h4>
-            <p class="project-description">
-                SELLA is a modern sales management platform built for growing businesses. From tracking real-time revenue to managing your full product catalog, SELLA gives your team everything they need to close deals faster and stay on top of every order  without the complexity of traditional systems.</p>
-            <div class="project-buttons">
-                <a href="https://www.figma.com/design/FV9aQX2OJ4LYHAYX6aM8g7/Sella?node-id=0-1&t=UsI8pIxk8kcHprtL-1" title="View Coffee Clock Design" target="_blank" rel="noopener noreferrer">
-                    <button class="project-btn" type="button">View Design</button>
-                </a>
             </div>
         </div>
+
+        <!-- Minor projects (initially hidden by JS after threshold) -->
+        <div class="project-item">
+            <div class="project-year">2026</div>
+            <div class="project-details">
+                <h4 class="project-name">SELLA</h4>
+                <p class="project-description">
+                    SELLA is a modern sales management platform built for growing businesses. From tracking real-time revenue to managing your full product catalog, SELLA gives your team everything they need to close deals faster and stay on top of every order without the complexity of traditional systems.
+                </p>
+                <div class="project-buttons">
+                    <a href="https://www.figma.com/design/FV9aQX2OJ4LYHAYX6aM8g7/Sella?node-id=0-1&t=UsI8pIxk8kcHprtL-1" title="View SELLA Design" target="_blank" rel="noopener noreferrer">
+                        <button class="project-btn" type="button">View Design</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-year">2026</div>
+            <div class="project-details">
+                <h4 class="project-name">TAKESPOT</h4>
+                <p class="project-description">
+                    TakeSpot is a geolocation-based selfie gallery app that turns real-world locations into shared visual stories. Snap a selfie at a spot, drop it on the map, and join a chain of photos left by everyone who's ever stood in that same place.
+                    Every location has its own gallery — a Spot Chain that grows over time as more people visit and contribute. Discover spots near you, explore what others have captured there, and leave your mark for the next person to find.
+                    It's not just about the photo. It's about the place, the moment, and the people who were there before you.
+                </p>
+                <div class="project-buttons">
+                    <a href="https://www.figma.com/design/RmR9UTq9As6EPwLdd8auPo/Takespot-Design?node-id=0-1&t=4kr30mKqMylkbTGs-1" title="View Takespot Design" target="_blank" rel="noopener noreferrer">
+                        <button class="project-btn" type="button">View Design</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-year">2026</div>
+            <div class="project-details">
+                <h4 class="project-name">CODEKEEPER ABOUT US PAGE</h4>
+                <p class="project-description">
+                    Codekeeper is a Dutch legal tech company providing software and SaaS escrow solutions to ensure business continuity if a software vendor fails. They securely store and verify source code, configurations, and dependencies, enabling clients to access and redeploy critical applications. Codekeeper offers automated, double-encrypted deposits, 24/7 recovery support, and compliance support for regulations like DORA and NIS2.
+                </p>
+                <div class="project-buttons">
+                    <a href="https://www.figma.com/design/67Jn3g0OMiWW7axZ4E4jgv/About-Us-Codekeeper-Design?node-id=0-1&t=yoPdpoYod7k0mUzT-1" title="View Codekeeper About Us Design" target="_blank" rel="noopener noreferrer">
+                        <button class="project-btn" type="button">View Design</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-year">2026</div>
+            <div class="project-details">
+                <h4 class="project-name">COFFEE CLOCK</h4>
+                <p class="project-description">
+                    Coffee Clock is a modern coffee shop reimagined to enhance both aesthetics and user experience. The redesign focuses on creating a warm, inviting environment that balances comfort and functionality, making it ideal for socializing, working, or relaxing. Key elements include a cohesive visual identity, intuitive layout, and attention to detail in furniture, lighting, and branding. This project demonstrates my ability to merge design, atmosphere, and functionality to create a memorable customer experience.
+                </p>
+                <div class="project-buttons">
+                    <a href="https://www.figma.com/design/3T0rU3qFQcKvgj6KbNiJnh/COFFEE-CLOCK?node-id=412-4320&t=p4XP2Ulb5hrC6kFa-1" title="View Coffee Clock Design" target="_blank" rel="noopener noreferrer">
+                        <button class="project-btn" type="button">View Design</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-year">2024</div>
+            <div class="project-details">
+                <h4 class="project-name">BUKSU SAVE PARKING</h4>
+                <p class="project-description">
+                    BukSU Save Parking is a mobile application that allows users to save their parking location and easily navigate back to their parked vehicle using the built-in navigation feature.
+                </p>
+                <div class="project-buttons">
+                    <a href="https://mercado69.github.io/BUKSU-SAVE-PARKING/" title="Visit BukSU Save Parking website" target="_blank" rel="noopener noreferrer">
+                        <button class="project-btn" type="button">Project Web</button>
+                    </a>
+                    <a href="https://www.figma.com/design/mA4ZmPUpHXHWpv0meiDvVR/App-Dev-Onboarding?m=auto&t=BO4a8mpli3Vbl4Ca-6" title="View BukSU Save Parking designs" target="_blank" rel="noopener noreferrer">
+                        <button class="project-btn" type="button">View Design</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-year">2024</div>
+            <div class="project-details">
+                <h4 class="project-name">SHOP GUARD</h4>
+                <p class="project-description">
+                    Shopguard is a mobile-friendly application project designed to help users control shopping addiction by tracking spending habits, setting limits, and providing streaks or warnings when users are close to exceeding their set budget, encouraging smarter spending decisions in real time.
+                </p>
+                <div class="project-buttons">
+                    <a href="https://www.figma.com/design/LBL1l5Ka66BuH6zmwP69P4/SHOP-GUARD?m=auto&t=BO4a8mpli3Vbl4Ca-6" title="View Shop Guard application designs" target="_blank" rel="noopener noreferrer">
+                        <button class="project-btn" type="button">View Design</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-year">2021</div>
+            <div class="project-details">
+                <h4 class="project-name">MIX AND MATCH FURNITURES</h4>
+                <p class="project-description">
+                    Mix & Match Furnitures is a proposed online furniture shopping application that allows users to browse and customize furniture based on their personal style, tailor items to their preferences, and receive smarter recommendations by setting their room size for a better fit and layout.
+                </p>
+                <div class="project-buttons">
+                    <a href="https://www.figma.com/design/2Mq5q1j4U1f5jmjbsV9FGr/Mix-and-Match-Furnitures?m=auto&t=BO4a8mpli3Vbl4Ca-6" title="View Mix and Match Furnitures designs" target="_blank" rel="noopener noreferrer">
+                        <button class="project-btn" type="button">View Design</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-year">2025</div>
+            <div class="project-details">
+                <h4 class="project-name">BUKID+ EXPLORE THE UNSEEN</h4>
+                <p class="project-description">
+                    Bukid+ Explore The Unseen is a mobile application designed for travelers and locals in Bukidnon. It allows users to discover and book accommodations and tourist spots, explore trending places on an interactive map, and easily navigate their way around the area.
+                </p>
+                <div class="project-buttons">
+                    <a href="#" title="View Bukid+ Design" target="_blank" rel="noopener noreferrer">
+                        <button class="project-btn" type="button">View Design</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <button class="see-more-btn">See More</button>
     </div>
+</section>
 
-    <div class="project-item">
-        <div class="project-year">2026</div>
-        
-        <div class="project-details">
-            <h4 class="project-name">TAKESPOT</h4>
-            <p class="project-description">
-                TakeSpot is a geolocation-based selfie gallery app that turns real-world locations into shared visual stories. Snap a selfie at a spot, drop it on the map, and join a chain of photos left by everyone who's ever stood in that same place.
-                    Every location has its own gallery a Spot Chain that grows over time as more people visit and contribute. Discover spots near you, explore what others have captured there, and leave your mark for the next person to find.
-                        It's not just about the photo. It's about the place, the moment, and the people who were there before you.            <div class="project-buttons">
-                <a href="https://www.figma.com/design/RmR9UTq9As6EPwLdd8auPo/Takespot-Design?node-id=0-1&t=4kr30mKqMylkbTGs-1" title="View Coffee Clock Design" target="_blank" rel="noopener noreferrer">
-                    <button class="project-btn" type="button">View Design</button>
-                </a>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-container">
+            <h2 class="section-title">Skills</h2>
+            <p class="skills-description">My journey started with designing interfaces in Figma, experimenting with both web and mobile layouts, then I brought those designs to life using HTML and CSS and JavaScript while managing my projects with Git and GitHub. Curious about how things work behind the scenes, I explored PHP and MySQL for backend-driven secure logins and frameworks make development easier. Along the way I expanded into mobile apps using React Native, Expo, and Android Studios blending Design and development to create experiences across platforms.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-icon">
+                    <img src="./images/Figma.png" alt="Figma">
+                </div>
+                <div class="skill-icon">
+                    <img src="./images/HTML.png" alt="HTML5">
+                </div>
+                <div class="skill-icon">
+                    <img src="./images/Css.png" alt="CSS3">
+                </div>
+                <div class="skill-icon">
+                    <img src="./images/Javascript.png" alt="JavaScript">
+                </div>
+                <div class="skill-icon">
+                    <img src="./images/Git.png" alt="Git">
+                </div>
+                <div class="skill-icon">
+                    <img src="./images/Github.png" alt="GitHub">
+                </div>
+                <div class="skill-icon">
+                    <img src="./images/PHP.png" alt="PHP">
+                </div>
+                <div class="skill-icon">
+                    <img src="./images/mysql.png" alt="MySql">
+                </div>
+                <div class="skill-icon">
+                    <img src="./images/Laravel.png" alt="laravel">
+                </div>
+                <div class="skill-icon">
+                    <img src="./images/React.png" alt="React">
+                </div>
+                <div class="skill-icon">
+                    <img src="./images/Expo.png" alt="Expo">
+                </div>
+                <div class="skill-icon">
+                    <img src="./images/Android Studio.png" alt="Android Studio">
+                </div>
+
+                <div class="skill-icon">
+                    <img src="./images/ThunderBit.png" alt="ThunderBit">
+                </div>
             </div>
         </div>
+    </section>
+
+   <section id="certificates" class="certificates">
+    <div class="certificates-container">
+        <h2 class="section-title">My Certificates</h2>
+
+        <div class="certificates-grid">
+
+            <div class="certificate-card" data-certificate="ACCENTURE">
+                <span>Accenture Digital Skills: User Experience</span>
+            </div>
+
+            <div class="certificate-card" data-certificate="TOPCIT">
+                <span>Topcit Korea Lv2</span>
+            </div>
+
+            <div class="certificate-card" data-certificate="NC2">
+                <span>Tesda CSS: NCII Profieciency</span>
+            </div>
+
+            <div class="certificate-card" data-certificate="LEARNIFY">
+                <span>Learnify: UI/UX Full Course</span>
+            </div>
+
+            <div class="certificate-card" data-certificate="BYOL">
+                <span>Bring Your Own Laptop: Figma UI/UX Design Course</span>
+            </div>
+
+            <div class="certificate-card" data-certificate="AJSMART">
+                <span>Aj Smart: Figma UI Design (Short Course)</span>
+            </div>
+
+            <div class="certificate-card" data-certificate="NETWORKING-CYBER">
+                <span>Cisco: Introduction to Cyber Security</span>
+            </div>
+
+            <div class="certificate-card" data-certificate="NETWORKING-ITN">
+                <span>Cisco: Introduction to Networks</span>
+            </div>
+
+            <div class="certificate-card" data-certificate="NETWORKING-SRWE">
+                <span>Cisco: Switching, Routing, and Wireless Essentials</span>
+            </div>
+
+            <div class="certificate-card" data-certificate="NETWORKING-ENSA">
+                <span>Cisco: Enterprise Networking, Security, and Automation</span>
+            </div>
+
+            <div class="certificate-card" data-certificate="WADHWANI">
+                <span>Wadhwani: Employability Skills Job Ready</span>
+            </div>
+
+        </div>
+
+        <button class="see-more-btn">
+            See More
+        </button>
+
+        <div class="modal-overlay" id="certificateModal">
+            <button class="modal-close" id="closeModal">
+                &times;
+            </button>
+
+            <img
+                class="modal-image"
+                id="modalImage"
+                alt="Certificate"
+            >
+        </div>
+
     </div>
+</section>
 
-    <div class="project-item">
-        <div class="project-year">2026</div>
-        
-        <div class="project-details">
-            <h4 class="project-name">CODEKEEPER ABOUT US PAGE</h4>
-            <p class="project-description">
-                Codekeeper is a Dutch legal tech company providing software and SaaS escrow solutions to ensure business continuity if a software vendor fails. They securely store and verify source code, configurations, and dependencies, enabling clients to access and redeploy critical applications. Codekeeper offers automated, double-encrypted deposits, 24/7 recovery support, and compliance support for regulations like DORA and NIS2.
-            </p>
-            <div class="project-buttons">
-                <a href="https://www.figma.com/design/67Jn3g0OMiWW7axZ4E4jgv/About-Us-Codekeeper-Design?node-id=0-1&t=yoPdpoYod7k0mUzT-1" title="View Coffee Clock Design" target="_blank" rel="noopener noreferrer">
-                    <button class="project-btn" type="button">View Design</button>
-                </a>
-            </div>
-        </div>
-    </div>
+    <!-- Contact & Socials Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Contacts and Socials</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p class="contact-email">Davyjones3211512345@gmail.com</p>
+                    <p class="contact-phone">🇵🇭 +63 992 217 4494</p>
+                </div>
 
-    <div class="project-item">
-        <div class="project-year">2026</div>
-        
-        <div class="project-details">
-            <h4 class="project-name">COFFEE CLOCK</h4>
-            <p class="project-description">
-                Coffee Clock is a modern coffee shop reimagined to enhance both aesthetics and user experience. The redesign focuses on creating a warm, inviting environment that balances comfort and functionality, making it ideal for socializing, working, or relaxing. Key elements include a cohesive visual identity, intuitive layout, and attention to detail in furniture, lighting, and branding. This project demonstrates my ability to merge design, atmosphere, and functionality to create a memorable customer experience.            </p>
-            <div class="project-buttons">
-                <a href="https://www.figma.com/design/3T0rU3qFQcKvgj6KbNiJnh/COFFEE-CLOCK?node-id=412-4320&t=p4XP2Ulb5hrC6kFa-1" title="View Coffee Clock Design" target="_blank" rel="noopener noreferrer">
-                    <button class="project-btn" type="button">View Design</button>
-                </a>
-            </div>
-        </div>
-    </div>
+                <div class="socials">
+    <h3>Follow me on</h3>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/davy-jones-locker-mercado-73a80636a"
+           class="social-link"
+           target="_blank"
+           rel="noopener noreferrer">
+            LinkedIn
+        </a>
 
-    <div class="project-item">
-        <div class="project-year">2024</div>
-        <div class="project-details">
-            <h4 class="project-name">BUKSU SAVE PARKING</h4>
-            <p class="project-description">
-                BukSU Save Parking is a mobile application that allows users to save their parking location and easily navigate back to their parked vehicle using the built-in navigation feature.
-            </p>
-            <div class="project-buttons">
-                <a href="https://mercado69.github.io/BUKSU-SAVE-PARKING/" title="Visit BukSU Save Parking website" target="_blank" rel="noopener noreferrer">
-                    <button class="project-btn" type="button">Project Web</button>
-                </a>
-                <a href="https://www.figma.com/design/mA4ZmPUpHXHWpv0meiDvVR/App-Dev-Onboarding?m=auto&t=BO4a8mpli3Vbl4Ca-6" title="View BukSU Save Parking designs" target="_blank" rel="noopener noreferrer">
-                    <button class="project-btn" type="button">View Design</button>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-item">
-        <div class="project-year">2024</div>
-        <div class="project-details">
-            <h4 class="project-name">SHOP GUARD</h4>
-            <p class="project-description">
-                Shopguard is a mobile-friendly application project designed to help users control shopping addiction by tracking spending habits, setting limits, and providing streaks or warnings when users are close to exceeding their set budget, encouraging smarter spending decisions in real time.
-            </p>
-            <div class="project-buttons">
-                <a href="https://www.figma.com/design/LBL1l5Ka66BuH6zmwP69P4/SHOP-GUARD?m=auto&t=BO4a8mpli3Vbl4Ca-6" title="View Shop Guard application designs" target="_blank" rel="noopener noreferrer">
-                    <button class="project-btn" type="button">View Design</button>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-item">
-        <div class="project-year">2021</div>
-        <div class="project-details">
-            <h4 class="project-name">MIX AND MATCH FURNITURES</h4>
-            <p class="project-description">
-                Mix & Match Furnitures is a proposed online furniture shopping application that allows users to browse and customize furniture based on their personal style, tailor items to their preferences, and receive smarter recommendations by setting their room size for a better fit and layout.
-            </p>
-            <div class="project-buttons">
-                <a href="https://www.figma.com/design/2Mq5q1j4U1f5jmjbsV9FGr/Mix-and-Match-Furnitures?m=auto&t=BO4a8mpli3Vbl4Ca-6" title="View Mix and Match Furnitures designs" target="_blank" rel="noopener noreferrer">
-                    <button class="project-btn" type="button">View Design</button>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-item">
-        <div class="project-year">2025</div>
-        <div class="project-details">
-            <h4 class="project-name">BUKID+ EXPLORE THE UNSEEN</h4>
-           <p class="project-description">
-    Bukid+ Explore The Unseen is a mobile application designed for travelers and locals in Bukidnon. It allows users to discover and book accommodations and tourist spots, explore trending places on an interactive map, and easily navigate their way around the area.
-</p>
-
-            <div class="project-buttons">
-                <a href="https://github.com/DookieMercado/Bukidplusv2.git" title="Visit Bukid+ project on GitHub" target="_blank" rel="noopener noreferrer">
-                    <button class="project-btn" type="button">Visit Project in GitHub</button>
-                </a>
-                <a href="https://www.figma.com/design/6cScTBgLnj6T1aXdHRLK07/BUKID?node-id=0-1&t=cWhaBWUETwMLAglN-1" title="View Bukid+ design in Figma" target="_blank" rel="noopener noreferrer">
-                    <button class="project-btn" type="button">View Design</button>
-                </a>
-            </div>
-        </div>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/4692303"
+           class="social-link"
+           target="_blank"
+           rel="noopener noreferrer">
+            OnlineJobs
+        </a>
     </div>
 </div>
-
-        </div>
-
-
-        <div class="see-more-container">
-            <button class="see-more-btn" id="seeMoreBtn" type="button" title="Show more projects">See More Projects</button>
-        </div>
-
-
-      
-    </section>
-
-
-<section class="skills" id="skills">
-    <h2 class="skills-title">SKILLS</h2>
-    
-    <div class="skills-container">
-        <div class="skills-text">
-            <p>
-                My journey started with designing interfaces in <span class="skill-highlight" data-skill="figma">Figma</span>, experimenting with both web and mobile layouts, then I brought those designs to life using <span class="skill-highlight" data-skill="html">HTML</span> and <span class="skill-highlight" data-skill="css">CSS</span> and <span class="skill-highlight" data-skill="javascript">JavaScript</span> while managing my projects with <span class="skill-highlight" data-skill="git">Git</span> and <span class="skill-highlight" data-skill="github">GitHub</span>. Curious about how things work behind the scenes, I explored <span class="skill-highlight" data-skill="php">PHP</span> and <span class="skill-highlight" data-skill="mysql">MySQL</span> for backend basics. I later discovered <span class="skill-highlight" data-skill="laravel">Laravel</span>, which showed me how secure logins and frameworks make development easier. Along the way, I expanded into mobile apps using <span class="skill-highlight" data-skill="react">React Native</span>, <span class="skill-highlight" data-skill="expo">Expo</span>, and <span class="skill-highlight" data-skill="android">Android Studio</span>, blending design and development to create experiences across platforms.
-            </p>
-        </div>
-
-        <div class="tech-stack">
-            <h3 class="tech-stack-title">MY CURRENT TECH STACK</h3>
-            
-            <div class="tech-grid">
-
-                <div class="tech-item" data-tech="figma">
-                    <div class="tech-icon">
-                        <img src="images/figma.png" alt="Figma Logo">
-                    </div>
-                </div>
-
-                <div class="tech-item" data-tech="html">
-                    <div class="tech-icon">
-                        <img src="images/html.png" alt="HTML5 Logo">
-                    </div>
-                </div>
-
-
-                <div class="tech-item" data-tech="css">
-                    <div class="tech-icon">
-                        <img src="images/css.png" alt="CSS3 Logo">
-                    </div>
-                </div>
-
-                <div class="tech-item" data-tech="javascript">
-                    <div class="tech-icon">
-                        <img src="images/Javascript.png" alt="JavaScript Logo">
-                    </div>
-                </div>
-
-
-                <div class="tech-item" data-tech="git">
-                    <div class="tech-icon">
-                        <img src="images/git.png" alt="Git Logo">
-                    </div>
-                </div>
-
-
-                <div class="tech-item" data-tech="github">
-                    <div class="tech-icon">
-                        <img src="images/github.png" alt="GitHub Logo">
-                    </div>
-                </div>
-
-
-                <div class="tech-item" data-tech="php">
-                    <div class="tech-icon">
-                        <img src="images/php.png" alt="PHP Logo">
-                    </div>
-                </div>
-
-
-                <div class="tech-item" data-tech="mysql">
-                    <div class="tech-icon">
-                        <img src="images/mysql.png" alt="MySQL Logo">
-                    </div>
-                </div>
-
-                <div class="tech-item" data-tech="laravel">
-                    <div class="tech-icon">
-                        <img src="images/Laravel.png" alt="Laravel Logo">
-                    </div>
-                </div>
-
-
-                <div class="tech-item" data-tech="react">
-                    <div class="tech-icon">
-                        <img src="images/react.png" alt="React Logo">
-                    </div>
-                </div>
-
-
-                <div class="tech-item" data-tech="expo">
-                    <div class="tech-icon">
-                        <img src="images/expo.png" alt="Expo Logo">
-                    </div>
-                </div>
-
-                <div class="tech-item" data-tech="android">
-                    <div class="tech-icon">
-                        <img src="images/android.png" alt="Android Studio Logo">
-                    </div>
-                </div>
             </div>
-        </div>
-        
-        <div class="certificates-quote">
-            <p>My hands are ready, my will is wide. To learn, to stretch, to grow.</p>
-            <p>For the greatest skill I hold inside is the hunger to always know.</p>
-        </div>
-    </div>
-</section>
-
-
-
-<section class="certificates" id="certificates">
-    <h2 class="certificates-title">MY CERTIFICATES</h2>
-
-    <div class="certificates-grid">
-        <div class="certificate-item full-width" data-certificate="accenture">
-            ACCENTURE DIGITAL SKILLS: USER EXPERIENCE
-        </div>
-        
-        <div class="certificate-item half-width" data-certificate="topcit">
-            TOPCIT KOREA LV2
-        </div>
-        <div class="certificate-item half-width" data-certificate="tesda">
-            TESDA CSS: NC2 PROFICIENCY
-        </div>
-        
-        <div class="certificate-item full-width" data-certificate="learnify">
-            LEARNIFY: UI/UX FULL COURSE
-        </div>
-
-        <div class="certificate-item full-width" data-certificate="byol">
-            BRING YOUR OWN LAPTOP: FIGMA UI/UX DESIGN
-        </div>
-        
-        <div class="certificate-item full-width" data-certificate="ajsmart">
-            AJ SMART: FIGMA UI DESIGN
-        </div>
-        
-
-        <div class="cisco-row full-width">
-            <div class="certificate-item cisco-item" data-certificate="cisco-itcs">
-                CISCO: ITCS
-            </div>
-            <div class="certificate-item cisco-item" data-certificate="cisco-itn">
-                CISCO: ITN
-            </div>
-            <div class="certificate-item cisco-item" data-certificate="cisco-srwe">
-                CISCO: SRWE
-            </div>
-            <div class="certificate-item cisco-item" data-certificate="cisco-ensa">
-                CISCO: ENSA
-            </div>
-            <div class="certificate-item cisco-item" data-certificate="cisco-wad">
-                WADHWANI
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="certificateModal">
-        <button class="modal-close" id="closeModal">&times;</button>
-        <img class="modal-image" id="modalImage" src="" alt="Certificate Preview">
-    </div>
-</section>
-
-
-    <section class="contact" id="contact">
-        <h2 class="contact-title">CONTACT AND SOCIALS</h2>
-        
-        <div class="contact-container">
-
-            <a href="mailto:davyjones3211512345@gmail.com" class="contact-item">
-                <div class="contact-icon">
-                    <img src="./images/gmails.png" alt="Gmail" class="contact-img">
-                </div>
-                <div class="contact-info">
-                    <h3>Gmail</h3>
-                    <span>EmailMercado</span>
-                </div>
-            </a>
-
-
-            <a href="https://t.me/DookieMercado" target="_blank" rel="noopener noreferrer" class="contact-item">
-                <div class="contact-icon">
-                    <img src="./images/telegram.png" alt="Telegram" class="contact-img">
-                </div>
-                <div class="contact-info">
-                    <h3>Telegram</h3>
-                    <span>DookierMercado</span>
-                </div>
-            </a>
-            <a href="https://www.linkedin.com/in/davy-jones-locker-mercado-73a80636a/" target="_blank" rel="noopener noreferrer" class="contact-item">
-                <div class="contact-icon">
-                    <img src="./images/endin.png" alt="Telegram" class="contact-img">
-                </div>
-                <div class="contact-info">
-                    <h3>Linkedin</h3>
-                    <span>LinkedinMercado</span>
-                </div>
-            </a>
-             <a href="https://www.onlinejobs.ph/jobseekers/info/4692303" target="_blank" rel="noopener noreferrer" class="contact-item">
-                <div class="contact-icon">
-                    <img src="./images/ol.png" alt="Telegram" class="contact-img">
-                </div>
-                <div class="contact-info">
-                    <h3>OnlineJobsPH</h3>
-                    <span>JobSeekerMercado</span>
-                </div>
-            </a>
-
         </div>
     </section>
 
-<script src="script.js"></script>
-<script src="certificates.js"></script>
-<script src="typing-animation.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Davy Mercado. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="seemore.js"></script>
+    <script src="modalcertificate.js"></script> 
+    <script src="resume-modal.js"></script>
 </body>
 </html>
