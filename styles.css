@@ -941,13 +941,15 @@ body {
     color: var(--text-gray);
     margin-bottom: var(--space-md);
     cursor: pointer;
-    transition: var(--transition);
+    
+    font-weight: 500; /* keep fixed */
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
 }
 
 .contact-email:hover,
 .contact-phone:hover {
     color: var(--black);
-    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .social-links {
@@ -1312,3 +1314,4 @@ body {
         padding: 2px 8px;
     }
 }
+
