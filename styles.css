@@ -128,21 +128,31 @@ body {
 
 
 .resume-btn {
-    background-color: var(--primary-green);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    padding: var(--space-sm) var(--space-md);
+
+    background-color: transparent;
     color: var(--black);
-    padding: var(--space-sm) var(--space-lg);
-    border-radius: 0; /* removes corners */
-    font-weight: 500;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-display);
+
+    border: 1.5px solid #D9D9D9;
+    border-radius: 0;
+
     cursor: pointer;
     transition: var(--transition);
-    border: 1px solid #D9D9D9; /* stroke */
-    font-family: var(--font-display);
 }
 
 .resume-btn:hover {
-    background-color: #c5f0c5;
-    color: var(--black);          /* text stays black on hover */
-    transform: translateY(-2px);
+    background-color: var(--black);
+    color: var(--primary-green); /* or white if you prefer */
 }
 
 /* === Full-viewport Resume Modal === */
@@ -320,9 +330,9 @@ body {
 }
 
 .cta-button {
-    background-color: var(--primary-green);
+    background-color: #FFFFFF;
     color: var(--black);
-    border: 1px solid #D9D9D9;
+    border: 1.5px solid #D9D9D9;
     padding: var(--space-md) var(--space-2xl);
     font-size: var(--size-base);
     font-weight: 500;
@@ -330,14 +340,16 @@ body {
     cursor: pointer;
     transition: var(--transition);
     font-family: var(--font-display);
-    display: inline-block;              /* keeps button naturally centered */
-    text-decoration: none;   /* removes underline */
+    display: inline-block;
+    text-decoration: none;
 }
 
 .cta-button:hover {
-    background-color: #c5f0c5;
+    background-color: var(--black);
+    color: var(--primary-green); /* or white if you prefer */
+    border-color: var(--black);
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(219, 255, 222, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* ======================================
@@ -629,11 +641,11 @@ body {
     border: 1px solid #D9D9D9;
     padding: var(--space-sm) var(--space-lg);
     font-size: var(--size-sm);
-    font-weight: 500;
+    font-weight: 400; /* normal font weight */
     border-radius: 0;
     cursor: pointer;
     transition: var(--transition);
-    font-family: var(--font-display);
+    font-family: inherit; /* uses default page font */
 }
 
 .project-btn:hover {
@@ -644,25 +656,31 @@ body {
 
 /* See More button – reuses your existing style, just ensure it’s included */
 .see-more-btn {
-    background-color: var(--primary-green);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 130px;
+    padding: var(--space-sm) var(--space-md);
+
     color: var(--black);
-    border: 1px solid #D9D9D9;
-    padding: var(--space-md) var(--space-xl);
-    font-size: var(--size-base);
-    font-weight: 500;
+    background-color: transparent;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    border: 1.5px solid #D9D9D9;
     border-radius: 0;
+
     cursor: pointer;
     transition: var(--transition);
-    margin-top: var(--space-lg);
-    font-family: var(--font-display);
 }
 
 .see-more-btn:hover {
-    background-color: #c5f0c5;
-    transform: translateY(-2px);
-    color: var(--black);
+    background-color: var(--black);
+    color: var(--primary-green); /* or white if you prefer */
 }
-
 /* Responsive */
 @media (max-width: 768px) {
     .project-item {
@@ -933,15 +951,15 @@ body {
     justify-content: center;
     align-items: center;
 
-    width: 130px; /* adjust size if needed */
+    width: 130px;
     padding: var(--space-sm) var(--space-md);
 
     color: var(--black);
     text-decoration: none;
-    font-size: var(--size-base);
-    font-weight: 600;
-    border: 2px solid var(--black);
-    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1.5px solid #000000;
+    border-radius: 0; /* square corners */
     transition: var(--transition);
 }
 
