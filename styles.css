@@ -152,7 +152,8 @@ body {
 
 .resume-btn:hover {
     background-color: var(--black);
-    color: var(--primary-green); /* or white if you prefer */
+    color: var(--primary-green);
+    border-color: var(--black);
 }
 
 /* === Full-viewport Resume Modal === */
@@ -681,7 +682,8 @@ body {
 
 .see-more-btn:hover {
     background-color: var(--black);
-    color: var(--primary-green); /* or white if you prefer */
+    color: var(--primary-green);
+    border-color: var(--black);
 }
 /* Responsive */
 @media (max-width: 768px) {
