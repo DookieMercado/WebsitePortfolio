@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const iframe = document.getElementById('resumeIframe');
   
   // Path to your PDF – adjust if needed
-  const pdfPath = 'files/MercadoDavyResume.pdf'; // 👈 change to your actual file name
+  const pdfPath = 'files/MercadoDavyResume.pdf'; 
 
   // Open modal and load PDF
   function openModal(e) {
