@@ -26,24 +26,32 @@ window.addEventListener('scroll', () => {
 });
 
 // ======================================
-// SMOOTH SCROLL NAVIGATION
+// SMOOTH SCROLL NAVIGATION (FIXED)
 // ======================================
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
 
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        
-        if (href.startsWith('#')) {
-            e.preventDefault();
-            const targetId = href.slice(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+        // Skip empty hash (e.g., href="#")
+        if (href === '#') return;
+
+        e.preventDefault();
+
+        const targetId = href.substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            // Get navbar height for offset
+            const navbar = document.querySelector('.navbar');
+            const navbarHeight = navbar ? navbar.offsetHeight : 0;
+
+            const elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - navbarHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
         }
     });
 });

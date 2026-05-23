@@ -52,9 +52,8 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
-
 body {
     font-family: var(--font-body);
     color: var(--text-gray);
