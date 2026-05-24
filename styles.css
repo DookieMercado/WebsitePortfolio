@@ -516,10 +516,16 @@ body {
 .service-card {
     background-color: var(--white);
     border: 1px solid var(--border-gray);
-    border-radius: 8px;
+    border-radius: 0px;
     padding: var(--space-xl);
     text-align: center;
     transition: var(--transition);
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center; /* horizontal center */
 }
 
 .service-card:hover {
@@ -533,8 +539,8 @@ body {
 }
 
 .service-icon img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     display: block;
     margin: 0 auto;
 }
@@ -739,8 +745,8 @@ body {
     justify-content: center;
     aspect-ratio: 1;
     background-color: var(--white);
-    border-radius: 8px;
-    border: 1px solid var(--border-gray);
+    border-radius: 0px;
+    border: 0.5px solid #D9D9D9;
     transition: var(--transition);
     cursor: pointer;
 }
@@ -785,16 +791,16 @@ body {
         rgba(255,255,255,0.8)
     );
 
-    border: 1px solid var(--border-gray);
-    border-radius: 10px;
+    border: 0.5px solid #D9D9D9;
+    border-radius: 0px;
 
     min-height: 130px;
     padding: 20px;
 
     display: flex;
-    flex-direction: column;        /* stack content vertically */
-    align-items: center;           /* horizontal center */
-    justify-content: center;       /* vertical center */
+    flex-direction: column;       
+    align-items: center;           
+    justify-content: center;       
 
     cursor: pointer;
 
