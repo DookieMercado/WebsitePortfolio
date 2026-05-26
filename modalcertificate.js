@@ -13,10 +13,6 @@ const cert=card.dataset.certificate;
 
 let path=`./certificates/${cert}.png`;
 
-if(cert==="NC2"){
-path=`./certificates/${cert}.jpg`;
-}
-
 modalImg.src=path;
 
 modal.classList.add("active");
