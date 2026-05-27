@@ -490,22 +490,33 @@ body {
    OPEN TO WORK SECTION
    ====================================== */
 
-.open-to-work {
-    background-color: var(--light-gray);
-    padding: var(--space-3xl) var(--space-xl);
+.work-container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.work-container {
-    max-width: 1000px;  /* CHANGED: was 1200px */
-    margin: 0 auto;
+.open-to-work .section-title {
+    align-self: flex-end;
+    margin-bottom: -5px; 
 }
 
 .work-subtitle {
-    font-size: var(--size-base);
-    color: var(--text-gray);
+    align-self: flex-end;
+    margin-top: 0;
     margin-bottom: var(--space-2xl);
-    
+
+    max-width: 550px;  
+    text-align: right;
 }
+.work-container {
+    max-width: 1000px;  
+    margin: 0 auto;
+}
+
+
 
 .services-grid {
     display: grid;
@@ -524,8 +535,8 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertical center */
-    align-items: center; /* horizontal center */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .service-card:hover {
@@ -575,6 +586,17 @@ body {
     line-height: 1.6;
 }
 
+@media (max-width: 768px) {
+    .open-to-work .section-title,
+    .work-subtitle {
+        align-self: center;
+        text-align: center;
+    }
+
+    .work-subtitle {
+        max-width: 400px; /* adjust if needed */
+    }
+}
 
 /* ======================================
    PROJECTS SECTION (NEW DESIGN)
@@ -665,7 +687,6 @@ body {
     color: var(--black);
 }
 
-/* See More button – reuses your existing style, just ensure it’s included */
 .see-more-btn {
     display: inline-flex;
     justify-content: center;
@@ -730,7 +751,7 @@ body {
     max-width: 100%;
     width: 100%;
 
-    text-align: left; /* better than justify for readability */
+    text-align: left;
 }
 
 .skills-grid {
@@ -1044,26 +1065,26 @@ body {
 @media (max-width: 768px) {
     .nav-container {
         padding: var(--space-md) var(--space-lg);
-        flex-direction: row; /* keep logo and hamburger in one row */
+        flex-direction: row; 
         justify-content: space-between;
         align-items: center;
     }
 
     .hamburger {
-        display: flex; /* show hamburger */
+        display: flex; 
     }
 
     .nav-links {
-        display: none; /* hide menu by default */
+        display: none; 
         flex-direction: column;
         width: 100%;
         gap: var(--space-md);
         padding: var(--space-md) 0;
-        order: 3; /* place below logo and hamburger */
+        order: 3; 
     }
 
     .nav-links.active {
-        display: flex; /* show when toggled */
+        display: flex; 
     }
 
     .nav-links li {
