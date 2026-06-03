@@ -1336,4 +1336,57 @@ body {
         padding: 2px 8px;
     }
 }
+/* ======================================
+   DESIGN PROCESS SECTION
+   ====================================== */
 
+.design-process {
+    background-color: var(--white);
+    padding: var(--space-3xl) var(--space-xl);
+}
+
+.process-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-lg);
+}
+
+.process-step {
+    border-top: 3px solid var(--primary-green);
+    padding-top: var(--space-md);
+}
+
+.process-number {
+    display: block;
+    font-size: var(--size-sm);
+    font-weight: 700;
+    color: #38B75A;
+    margin-bottom: var(--space-sm);
+}
+
+.process-step h3 {
+    font-size: var(--size-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--black);
+}
+
+.process-step p {
+    font-size: var(--size-sm);
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+@media (max-width: 768px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        padding-bottom: var(--space-lg);
+    }
+}
