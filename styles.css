@@ -1336,6 +1336,7 @@ body {
         padding: 2px 8px;
     }
 }
+
 /* ======================================
    DESIGN PROCESS SECTION
    ====================================== */
@@ -1389,4 +1390,30 @@ body {
     .process-step {
         padding-bottom: var(--space-lg);
     }
+}
+.cursor-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 240px;   /* slightly bigger */
+    height: 140px;  /* slightly bigger */
+
+    pointer-events: none;
+    opacity: 0;
+
+    transform: translate(-50%, -120%) scale(0.9);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+
+    z-index: 9999;
+}
+
+.cursor-preview img {
+    width: 170%;
+    height: 140%;
+    object-fit: cover;
+
+    border-radius: 0; /* still no rounding */
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
