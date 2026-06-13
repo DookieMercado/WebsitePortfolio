@@ -406,7 +406,7 @@ body {
 }
 
 /* ======================================
-   EXPERIENCE SECTION
+   EXPERIENCE SECTION (NEW DESIGN)
    ====================================== */
 
 .experience {
@@ -470,8 +470,8 @@ body {
     border: 1px solid #D9D9D9;
     padding: var(--space-md) var(--space-xl);
     font-size: var(--size-base);
-    font-weight: 500; /* match resume button */
-    border-radius: 0; /* no corners */
+    font-weight: 500;
+    border-radius: 0;
     cursor: pointer;
     transition: var(--transition);
     margin-top: var(--space-lg);
@@ -484,18 +484,38 @@ body {
     color: var(--black);
 }
 
+/* Responsive – matches Open to Work / Projects */
+@media (max-width: 768px) {
+    .experience {
+        padding: var(--space-2xl) var(--space-md);
+    }
+}
+
 
 
 /* ======================================
    OPEN TO WORK SECTION
    ====================================== */
 
+.open-to-work {
+    background-color: var(--white);
+    padding: var(--space-3xl) var(--space-xl);
+}
+
 .work-container {
     max-width: 1000px;
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: var(--size-4xl);
+    font-weight: 700;
+    margin-bottom: var(--space-2xl);
+    color: var(--black);
+    word-break: break-word;
 }
 
 .open-to-work .section-title {
@@ -507,20 +527,13 @@ body {
     align-self: flex-end;
     margin-top: 0;
     margin-bottom: var(--space-2xl);
-
     max-width: 550px;  
     text-align: right;
 }
-.work-container {
-    max-width: 1000px;  
-    margin: 0 auto;
-}
-
-
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-2xl);
 }
 
@@ -532,7 +545,6 @@ body {
     text-align: center;
     transition: var(--transition);
     min-height: 350px;
-
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -586,7 +598,17 @@ body {
     line-height: 1.6;
 }
 
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    .open-to-work {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
     .open-to-work .section-title,
     .work-subtitle {
         align-self: center;
@@ -594,10 +616,15 @@ body {
     }
 
     .work-subtitle {
-        max-width: 400px; /* adjust if needed */
+        max-width: 400px;
     }
 }
 
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
 /* ======================================
    PROJECTS SECTION (NEW DESIGN)
    ====================================== */
