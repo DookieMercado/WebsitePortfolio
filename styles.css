@@ -651,6 +651,13 @@ body {
     border-bottom: 2px solid var(--primary-green);
 }
 
+@media (max-width: 768px) {
+    .category-title {
+        text-align: center;
+        border-bottom: 2px solid var(--primary-green);
+    }
+}
+
 .project-item {
     display: grid;
     grid-template-columns: 100px 1fr;
