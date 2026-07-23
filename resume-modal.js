@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const iframe = document.getElementById('resumeIframe');
   
   // Path to your PDF – adjust if needed
-  const pdfPath = 'files/DMResume.pdf'; 
+  const pdfPath = 'files/MyResume.pdf'; 
 
   // Open modal and load PDF
   function openModal(e) {
